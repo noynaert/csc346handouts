@@ -33,3 +33,35 @@ The main() method is the top method.  VS Code adds "throws exception" to the mai
 First, there is the question of where to put the file to be read.  It needs to be placed in the "root" of the project folder.  
 
 My trick in VS Code is to click on the `README.md` file and then create a new file there.
+
+```java
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) {
+        System.out.println("Starting");
+
+        String fileName = "data.txt";
+        try {
+            Scanner input = new Scanner(new File(fileName));
+
+            while(input.hasNextLine()){
+                String line = input.nextLine();
+                System.out.printf("The line is \"%s\"\n", line);
+            }
+
+            input.close();
+        } catch (FileNotFoundException e) {
+            System.err.printf("***ERROR***, Could not find file %s\n", fileName);
+            System.exit(1);
+            //e.printStackTrace();
+        }
+
+        System.out.println("\nHello, World!");
+        System.out.println("Done");
+    }
+}
+
+```
