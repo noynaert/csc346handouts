@@ -42,7 +42,7 @@ Some of this material will be covered quickly.  A lot of it should still be revi
   * Namespaces
     * Domain names
   * Dependencies
-
+* Swing as an example of inheritance running rampant in the streets (as time permits)
 ### Unit 02 Data Exchange
 
 * Reading from databases using JDBC
