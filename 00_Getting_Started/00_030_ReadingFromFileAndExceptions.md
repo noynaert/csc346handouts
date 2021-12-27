@@ -59,7 +59,6 @@ public class App {
             //e.printStackTrace();
         }
 
-        System.out.println("\nHello, World!");
         System.out.println("Done");
     }
 }

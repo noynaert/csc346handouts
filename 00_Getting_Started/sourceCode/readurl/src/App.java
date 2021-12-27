@@ -1,5 +1,7 @@
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -38,23 +40,23 @@ public class App {
         }
 
         System.out.printf("\n Printing %d items without the index:\n", n);
-        for(String line: lines){
+        for (String line : lines) {
             System.out.printf("\t -- %s\n", line);
         }
 
     }
 
-/**
- * Attempts to read all the lines of text from the address.
- * 
- * Any lines read are added to the list.
- * 
- * If the URL cannot be read a message is printed to stderr and no change is made to the list.
- * 
- * @param address  -- A URL such as https://example.com
- * @param lines    -- An ArrayList.  Normally the list will be empty when the method is called
- *               
- */
+    /**
+     * Attempts to read all the lines of text from the address.
+     * 
+     * Any lines read are added to the list.
+     * 
+     * If the URL cannot be read a message is printed to stderr and no change is made to the list.
+     * 
+     * @param address  -- A URL such as https://example.com
+     * @param lines    -- An ArrayList.  Normally the list will be empty when the method is called
+     *               
+     */
 
     private static void remoteRead(String address, ArrayList<String> lines) {
         try {
@@ -65,15 +67,31 @@ public class App {
             String line; //One line from the file
             while ((line = input.readLine()) != null) {
                 // if(line.trim().length() > 0)
-                if(line.trim().startsWith("#"))
+                if (line.trim().startsWith("#"))
                     lines.add(line);
             }
-            
+
             input.close();
 
         } catch (Exception e) {
-            
+
             System.err.println(e.getMessage() + " (Continuing execution)");
+            // e.printStackTrace();
+        }
+    }
+
+    private static void readWithTwoExceptions(String address) {
+        
+        try {
+            URL url = new URL(address);
+            InputStreamReader inStream = new InputStreamReader(url.openStream());
+        } catch (MalformedURLException e) {
+            System.err.println("BAD URL: " + address + "*** ABORTING ***");
+            System.exit(1);
+            // e.printStackTrace();
+        } catch (IOException e) {
+            System.err.print  ("IO EXCEPTION: " + e.getMessage());
+            System.err.println("   Execution will continue");
             // e.printStackTrace();
         }
     }
