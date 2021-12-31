@@ -1,0 +1,9 @@
+Episode:Title:Release:Runtime
+1:Leavetaking:11/18/2021:54
+2:Shadow's Waiting:11/18/2021:57
+3:A Place of Safety:11/18/2021:58
+4:The Dragon Reborn:11/24/2021:61
+5:Blood Calls Blood:11/2/2021:60
+6:The Flame of Tar Valon:12/9/2021:62
+7:The Dark Along the Ways:12/16/2021:60
+8:The Eye of the World:12/24/2021:62
