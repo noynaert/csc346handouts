@@ -24,7 +24,19 @@ There will be two simple assignments.  Technically the assignments will be due a
   * Creating Objects.  
   * Arrays of Objects
   
-### Unit 01 -- Inheritance and Java Mechanics 
+### Unit 01 Data Exchange
+
+* Maven and Dependencies
+  * Namespaces
+    * Domain names
+  * Dependencies
+* Reading from databases using JDBC
+* Java Mappings, ArrayLists, Enumerated
+* XML
+* JSON
+* Restful APIs
+
+### Unit 02 -- Inheritance and Java Mechanics 
 
 Some of this material will be covered quickly.  A lot of it should still be review.
 
@@ -38,18 +50,7 @@ Some of this material will be covered quickly.  A lot of it should still be revi
   * Interfaces
 * Helper Classes
   * Static methods and fields
-* Maven and Dependencies
-  * Namespaces
-    * Domain names
-  * Dependencies
 * Swing as an example of inheritance running rampant in the streets (as time permits)
-### Unit 02 Data Exchange
-
-* Reading from databases using JDBC
-* Java Mappings, ArrayLists, Enumerated
-* XML
-* JSON
-* Restful APIs
 
 ### Unit 03 Spring Framework
 
