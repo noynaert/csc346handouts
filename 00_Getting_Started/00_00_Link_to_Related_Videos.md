@@ -1,0 +1,1 @@
+The videos that roughly go along with the following files are at [https://mwsu.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=7fda5322-ede0-49a9-865b-ae0b01183606](https://mwsu.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=7fda5322-ede0-49a9-865b-ae0b01183606) for your viewing pleasure.
