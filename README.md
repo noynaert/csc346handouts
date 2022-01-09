@@ -5,6 +5,8 @@ Lecture Notes and related information for CSC 346, Enterprise Computing in Java
 
 (Preliminary)
 
+Some material from Unit 02 (such as packages and Log4j may be covered as part of Unit 01 in order to get tools in place).
+
 ### Unit 00 -- Review
 
 This material is intended to catch people up to the same level.  It will be presented before class starts.
@@ -26,10 +28,12 @@ There will be two simple assignments.  Technically the assignments will be due a
   
 ### Unit 01 Data Exchange
 
+* Jar files
 * Maven and Dependencies
   * Namespaces
     * Domain names
   * Dependencies
+    * Log4j
 * Reading from databases using JDBC
 * Java Mappings, ArrayLists, Enumerated
 * XML
@@ -50,7 +54,7 @@ Some of this material will be covered quickly.  A lot of it should still be revi
   * Interfaces
 * Helper Classes
   * Static methods and fields
-* Swing as an example of inheritance running rampant in the streets (as time permits)
+* JavaFX as an example of inheritance running rampant in the streets (as time permits)
 
 ### Unit 03 Spring Framework
 
