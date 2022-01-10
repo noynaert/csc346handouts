@@ -1,4 +1,4 @@
-package loggerCSC346;
+package CSC346Utility;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,14 +8,14 @@ public class Logger {
     private static String name;
     private static PrintStream logFile = null;
     private static long startTime = java.lang.System.nanoTime();
-    
+
     public Logger(String name) {
         Logger.name = name;
         if (logFile == null) {
             try {
                 logFile = new PrintStream(new File(name + ".log"));
 
-                logFile.println(makeMessage("Creating log File at " + System.nanoTime()));
+                logFile.println(makeMessage("Creating log File at " + getSeconds()));
                 logFile.flush();
             } catch (FileNotFoundException e) {
                 System.err.println(e.getMessage());
@@ -28,14 +28,14 @@ public class Logger {
     }
 
     private static String makeMessage(String message) {
-        String s = String.format("%015d -->%s<--",getSeconds(), message);
+        String s = String.format("%1.4f -->%s<--", getSeconds(), message);
         return s;
     }
 
-    public static long getSeconds() {
+    public static double getSeconds() {
         long currentTime = System.nanoTime();
-        long seconds = (currentTime - startTime);
-        return seconds;
+        double seconds = (double) (currentTime - startTime)/1000000000.0;
+        double sec = (double) seconds / 1000000.;        return seconds;
     }
 
     public static void info(String message) {
@@ -43,18 +43,18 @@ public class Logger {
         logFile.flush();
     }
 
-    public static void exception(Exception e){
-        String message = "EXCEPTION: "+e.getMessage();
+    public static void exception(Exception e) {
+        String message = "EXCEPTION: " + e.getMessage();
         logFile.println(makeMessage(message));
         logFile.flush();
     }
 
     public static void done() {
-        
-        String message = String.format("Finished.  Time is %d seconds", System.nanoTime());
+
+        String message = String.format("Finished.  Time is %s seconds", getSeconds());
         logFile.println(makeMessage(message));
         logFile.flush();
 
     }
-    
+
 }
