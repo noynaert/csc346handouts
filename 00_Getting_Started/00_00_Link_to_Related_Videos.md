@@ -2,7 +2,7 @@ The videos that roughly go along with the following files are at [https://mwsu.h
 
 Github Page | Videos
 :--- | :---
-[00.00 Link to folder with videos](https://mwsu.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22ee38d0f5-4442-456d-9034-ae0b01190d00%22)|[Link to the folder with all of the videos](https://mwsu.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22ee38d0f5-4442-456d-9034-ae0b01190d00%22)
+00.00 Link to folder with videos|[Link to the folder with all of the videos](https://mwsu.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22ee38d0f5-4442-456d-9034-ae0b01190d00%22)
 [00_010_Intro](https://github.com/noynaert/csc346handouts/blob/main/00_Getting_Started/00_010_Intro.md) | [346_00_010](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=34e793bc-2a46-4540-96be-ae0b01198c39)
 [00_020_IDE](https://github.com/noynaert/csc346handouts/blob/main/00_Getting_Started/00_020_IDE.md) | [346_020 IDE](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=50539320-1860-4288-baf6-ae0b01198c04)<br>[346_020_Part2](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2cb22f25-cbb3-4bda-861c-ae0b01198bc9)
 [00_025_Git.md](https://github.com/noynaert/csc346handouts/blob/main/00_Getting_Started/00_025_Git.md) (Optional) | [346_00_025_git_OPTIONAL](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=77c54859-7b4b-4272-a56c-ae0b01198c6e)
