@@ -53,6 +53,8 @@ public class Logger {
 
     
     /** 
+     * Converts nanoseconds to seconds
+     * 
      * @return double
      */
     public static double getSeconds() {
