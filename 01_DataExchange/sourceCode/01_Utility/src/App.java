@@ -8,6 +8,7 @@ import CSC346Utility.Person;
 
 @SuppressWarnings("unchecked")
 public class App {
+    
     static Logger log = new Logger(App.class.getName());
 
     public static void main(String[] args) {

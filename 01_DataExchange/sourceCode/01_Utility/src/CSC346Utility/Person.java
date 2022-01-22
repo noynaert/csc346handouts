@@ -11,7 +11,6 @@ package CSC346Utility;
  *        -1 is the flag for age unknown
  * 
  */
-
 public class Person implements Comparable<Person> {
     private String firstName;
     private String lastName;

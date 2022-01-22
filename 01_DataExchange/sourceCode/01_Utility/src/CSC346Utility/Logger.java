@@ -46,6 +46,7 @@ public class Logger {
      * @param message: String with content of the message
      * @return A formatted string containing the timestamp and message
      */
+    
     private static String makeMessage(String message) {
         String s = String.format("%1.4f -->%s<--", getSeconds(), message);
         return s;
