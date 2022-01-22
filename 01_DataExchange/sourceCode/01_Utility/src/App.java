@@ -3,7 +3,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
-
 import CSC346Utility.Logger;
 import CSC346Utility.Person;
 
