@@ -20,17 +20,16 @@ public class App {
 
             Elements elements = doc.select("a");
             for (Element element : elements) {
-                System.out.println(element);
+                //System.out.println(element);
                 String address = element.attr("href");
                 String text = element.text();
-                System.out.printf("Address: %s\nText: %s\n\n", address, text);
+                System.out.printf("%s %s\n", text,address);
             }
 
         } catch (IOException e) {
             System.err.println(e.getMessage());
             System.err.println("Aborting");
             System.exit(1);
-            // e.printStackTrace();
         }
 
         System.out.println("Done!");
