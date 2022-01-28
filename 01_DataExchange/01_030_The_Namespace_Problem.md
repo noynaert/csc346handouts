@@ -17,3 +17,8 @@ There are two hard things in computer science: cache invalidation, naming things
 "Domain Name Backwards"
 
 If you have the domain name noynaert.com, your packages should be named "com.noynaert"
+
+```
+com.noynaert.logger
+edu.missouriwestern.noynaert
+```
