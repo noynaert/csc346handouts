@@ -14,3 +14,4 @@ mvn idea:idea
 
 The above needs a starting pom.xml file
 
+Generating a new archetype from an existing archtype
