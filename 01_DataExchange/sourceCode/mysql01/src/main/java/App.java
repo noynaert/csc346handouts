@@ -18,6 +18,10 @@ public class App {
 
         String connectString = String.format("jdbc:mysql://%s:3306/misc", host);
         System.out.printf("The connection string is \"%s\"\n", connectString);
+
+        System.out.println("\nDone!");
+    }
+    public static void directQuery(String user, String password, String ConnectionString){
         String query = "select state, nickname from states order by nickname";
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -35,7 +39,6 @@ public class App {
         }
 
 
-        System.out.println("\nDone!");
     }
 }
 /*
