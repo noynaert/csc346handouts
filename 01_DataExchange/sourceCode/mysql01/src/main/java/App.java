@@ -35,3 +35,24 @@ public class App {
         System.out.println("\nDone!");
     }
 }
+/*
+Note, to fix the missing Maven-assembly-plugin, see
+https://stackoverflow.com/questions/20496239/maven-plugins-can-not-be-found-in-intellij
+
+Look at the "newer" ide instructions:
+
+Click File 🡒 Settings.
+Expand Build, Execution, Deployment 🡒 Build Tools 🡒 Maven.
+Check Use plugin registry.
+Click OK or Apply.
+For IntelliJ 14.0.1, open the preferences---not settings---to find the plugin registry option:
+
+Click File 🡒 Preferences.
+Regardless of version, also invalidate the caches:
+
+Click File 🡒 Invalidate Caches / Restart.
+Click Invalidate and Restart.
+When IntelliJ starts again the problem should be vanquished.
+
+
+ */
