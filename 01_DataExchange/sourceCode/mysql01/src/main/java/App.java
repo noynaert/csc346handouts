@@ -1,8 +1,5 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
+import java.sql.*;
+import java.util.Scanner;
 /**
  * Demonstrates a simple mysql/mariadb connection
  *
@@ -11,7 +8,7 @@ import java.sql.Statement;
  */
 
 public class App {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String user = "csc";
         String password = "sandra4288";
         String host = "localhost";
@@ -19,9 +16,13 @@ public class App {
         String connectString = String.format("jdbc:mysql://%s:3306/misc", host);
         System.out.printf("The connection string is \"%s\"\n", connectString);
 
+        directQuery(user, password, connectString);
+        preparedStatement(user, password, connectString);
         System.out.println("\nDone!");
     }
-    public static void directQuery(String user, String password, String ConnectionString){
+
+
+    public static void directQuery(String user, String password, String connectString) {
         String query = "select state, nickname from states order by nickname";
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -34,11 +35,38 @@ public class App {
                 System.out.printf("%-20s %s\n", stateName, nickname);
             }
             con.close();
-        }catch(Exception e){
+        } catch (Exception e) {
             System.err.println("ERROR:\n" + e.getMessage());
         }
+    }
 
+    private static void preparedStatement(String user, String password, String connectString) {
+        String field; // User selected field
+        Scanner kbd = new Scanner(System.in);
+        System.out.print("What field? ");
+        field = kbd.next();
+        // Magic code to validate the field is legit should be inserted here.
 
+        String query = "select state, ? from states order by state";
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+
+        Connection con = DriverManager.getConnection(connectString, user, password);
+
+        PreparedStatement ps = con.prepareStatement(query);
+        ps.setString(1, field);  //plugs the field value into the first ? in query
+
+        ResultSet rs = ps.executeQuery();
+        while(rs.next() ){
+            String stateName = rs.getString("state");
+            String other = rs.getString(2);
+            System.out.printf("%-15s %s\n", stateName,other);
+        }
+
+        ps.close();
+        } catch (Exception e) {
+            System.err.println("ERROR in preparedStatement: " + e.getCause()  + " : " +e.getMessage());
+        }
     }
 }
 /*
