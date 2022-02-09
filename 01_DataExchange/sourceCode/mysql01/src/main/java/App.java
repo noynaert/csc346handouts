@@ -13,18 +13,21 @@ import java.sql.Statement;
 public class App {
     public static void main(String[] args){
         String user = "csc";
-        String password="sandra4288";
-        String connectString = "jdbc:mysql://localhost:3306/misc";
+        String password = "sandra4288";
+        String host = "localhost";
+
+        String connectString = String.format("jdbc:mysql://%s:3306/misc", host);
+        System.out.printf("The connection string is \"%s\"\n", connectString);
         String query = "select state, nickname from states order by nickname";
-        try{
+        try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=DriverManager.getConnection(connectString, user,password);
+            Connection con = DriverManager.getConnection(connectString, user, password);
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(query);
-            while(rs.next()){
+            while (rs.next()) {
                 String stateName = rs.getString(1);
                 String nickname = rs.getString(2);
-                System.out.printf("%-20s %s\n",stateName,nickname);
+                System.out.printf("%-20s %s\n", stateName, nickname);
             }
             con.close();
         }catch(Exception e){
