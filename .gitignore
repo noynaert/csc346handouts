@@ -119,4 +119,5 @@ project-template.xml
 woz.xml
 sql.xml
 password.txt
+passwords.txt
 target/*
