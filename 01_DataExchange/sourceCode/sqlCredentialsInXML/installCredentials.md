@@ -8,9 +8,7 @@ Here is the command I used on my system.  This uses the default pom file by defa
 mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=./credentials-0.1.jar
 ```
 
-See [https://maven.apache.org/guides/mini/guide-3rd-party-jars-local.html](https://maven.apache.org/guides/mini/guide-3rd-party-jars-local.html) for detailed instructions.
-
-See also [https://roufid.com/3-ways-to-add-local-jar-to-maven-project/](https://roufid.com/3-ways-to-add-local-jar-to-maven-project/)
+## POM.XML Dependency
 
 ```xml
    <dependency>
@@ -19,4 +17,11 @@ See also [https://roufid.com/3-ways-to-add-local-jar-to-maven-project/](https://
             <version>0.1</version>
     </dependency>
 ```
+
+## References
+
+See [https://maven.apache.org/guides/mini/guide-3rd-party-jars-local.html](https://maven.apache.org/guides/mini/guide-3rd-party-jars-local.html) for detailed instructions.
+
+See also [https://roufid.com/3-ways-to-add-local-jar-to-maven-project/](https://roufid.com/3-ways-to-add-local-jar-to-maven-project/)
+
 
