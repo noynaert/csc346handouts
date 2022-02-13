@@ -116,3 +116,6 @@ description.html
 modules.xml
 project-template.xml
 *.idea
+woz.xml
+sql.xml
+target/*
