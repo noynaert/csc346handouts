@@ -11,7 +11,7 @@ import java.io.File;
  * <?xml version="1.0"?>
  * <credentials>
  *     <user>csc</user>
- *     <password xhint="room where woz is located It definitily is not '!😈湯🦊🚴'">😈湯🦊🚴</password>
+ *     <password xhint="room where woz is located It definitily is not '!😈湯🦊🚴'"></password>
  *     <host>woz.cs.missouriwestern.edu</host>
  *     <port>3306</port>
  * </credentials>
