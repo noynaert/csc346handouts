@@ -118,4 +118,5 @@ project-template.xml
 *.idea
 woz.xml
 sql.xml
+password.txt
 target/*
