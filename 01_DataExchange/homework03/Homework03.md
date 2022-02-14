@@ -70,6 +70,7 @@ Illustrate converting XML to/from serialized object using XStream
 * Shane Slater-Pinnick
 * Alex Perpitch-Harvey
 * Jamil Whitehead
+* Josh Mesmer
 
 ### Group 7
 
