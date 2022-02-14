@@ -4,10 +4,10 @@
 
 Listed alphabetically
 
+* Cole Atkinson, coder
+* Riley McNeely, writer 
 * Kaleb Morcha, librarian [Github](https://github.com/kmorcha18) Email: kmorcha@missouriwestern.edu
-* Person 2, librarian [LinkedIn](.)
-* Person 3, writer [LinkedIn](.) [Github](.) [Instagram](.)
-* Person 4, coder and assistant librarian [Github](.)
+* Luke Townsend, coder
 
 ## Your task
 
