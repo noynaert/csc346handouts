@@ -103,7 +103,7 @@ Each group should write a tutorial with working examples.
 
 You should have examples that parse the three following items of code.  It is fine to load the first and third from a local file because the data is not dynamic.  However, the weather data should come from live data at the URL.  (NOAA will not run out of page views late in the month).
 
-* [A simple xml file](woz.xml) Be sure to pull the password hint which is an attribute.
+* [A simple xml file](zzwoz.xml) Be sure to pull the password hint which is an attribute.
 * [Nested XML file](https://w1.weather.gov/xml/current_obs/KSTJ.xml) Don't get distracted by the xsl(Ignore the main web page and view the source).  You don't need to extract all of the fields, but do some fields that are at the top level and some that are nested.  For example, do observation_time_rfc822 or the &lt;image>&lt;url>
 * [An array expressed as XML](https://civilserviceusa.github.io/us-states/data/states.xml)
 
