@@ -4,7 +4,7 @@
 
 Listed alphabetically
 
-* Person 1, coder [LinkedIn](.) [Github](.)
+* Kaleb Morcha, librarian [Github](https://github.com/kmorcha18) Email: kmorcha@missouriwestern.edu
 * Person 2, librarian [LinkedIn](.)
 * Person 3, writer [LinkedIn](.) [Github](.) [Instagram](.)
 * Person 4, coder and assistant librarian [Github](.)
