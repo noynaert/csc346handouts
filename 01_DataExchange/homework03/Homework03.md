@@ -1,5 +1,26 @@
 # XML assignment
 
+- [XML assignment](#xml-assignment)
+  - [Roles](#roles)
+  - [Reference articles:](#reference-articles)
+  - [Groups of XML Parsers](#groups-of-xml-parsers)
+    - [Group 2](#group-2)
+    - [Group 3](#group-3)
+    - [Group 4](#group-4)
+    - [Group 5](#group-5)
+    - [Group 6](#group-6)
+    - [Group 7](#group-7)
+    - [Group 8](#group-8)
+  - [The assignment](#the-assignment)
+    - [Examples you should use](#examples-you-should-use)
+  - [Github and Markdown](#github-and-markdown)
+    - [Markdown](#markdown)
+      - [Clone and modify your group page in this repo](#clone-and-modify-your-group-page-in-this-repo)
+  - [The woz.xml file](#the-wozxml-file)
+
+
+---
+
 A significant component of this assignment is demonstrating that you can learn technical material on your own.  Most of your groups will have software assigned that the instructor does not know.  *You* will become the local expert on that software.  Some people will be experts on the xml software.  Others will polish their Github and Markdown skills.
 
 ## Roles
@@ -82,7 +103,7 @@ Illustrate input and output using Jackson
 * Nicholas Wu
 
 
-# Group 8
+### Group 8
 
 Illustrate Input and Output using Simple XML
 
@@ -114,6 +135,8 @@ Some groups will need to create POJOs of the objects.  The POJOs do not need to 
 Some groups will need to serialize their data.  It may be easier to serialize the full object, or you might just create a limited serializable object.
 
 ## Github and Markdown
+
+:bulb: I just found [this Markdown Tutorial](https://youtu.be/ftOBvusMHjQ).  The first 9 minutes are probably all you need.  But I learned some stuff after 9 minutes
 
 Each group will need a repository.  I have a fantasy that all members of your team will use the repository to upload and download the files that they are contributing.  But it is OK if your team librarian collects the information and posts it for the group.
 
