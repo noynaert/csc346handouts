@@ -39,13 +39,13 @@ I think in most cases some groups will combine roles.  For example, two people m
 
 ## Groups of XML Parsers
 
-* 2. DOM Parsers  -- Read the entire XML file into memory
-* 3. SAX parsers -- Only reads the parts that are needed into memory
-* 4. StAX Parser -- Median between a DOM and SAX parser
-* 5. JAXB -- Converts objects to/from XML
-* 6. XStream -- Converts XML to/from serializable object
-* 7. Jackson XML 
-* 8. Simple XML
+* &nbsp;2. DOM Parsers  -- Read the entire XML file into memory
+* &nbsp;3. SAX parsers -- Only reads the parts that are needed into memory
+* &nbsp;4. StAX Parser -- Median between a DOM and SAX parser
+* &nbsp;5. JAXB -- Converts objects to/from XML
+* &nbsp;6. XStream -- Converts XML to/from serializable object
+* &nbsp;7. Jackson XML 
+* &nbsp;8. Simple XML
 
 Groups are based on the [https://www.baeldung.com/java-xml](https://www.baeldung.com/java-xml) article category.  Start by reading through your section and checking out the resources listed.
 
@@ -124,7 +124,7 @@ Each group should write a tutorial with working examples.
 
 You should have examples that parse the three following items of code.  It is fine to load the first and third from a local file because the data is not dynamic.  However, the weather data should come from live data at the URL.  (NOAA will not run out of page views late in the month).
 
-* [A simple xml file](zzwoz.xml) Be sure to pull the password hint which is an attribute.
+* [A simple xml file](https://raw.githubusercontent.com/noynaert/csc346handouts/main/01_DataExchange/homework03/zz_woz.xml) Be sure to pull the password hint which is an attribute.
 * [Nested XML file](https://w1.weather.gov/xml/current_obs/KSTJ.xml) Don't get distracted by the xsl(Ignore the main web page and view the source).  You don't need to extract all of the fields, but do some fields that are at the top level and some that are nested.  For example, do observation_time_rfc822 or the &lt;image>&lt;url>
 * [An array expressed as XML](https://civilserviceusa.github.io/us-states/data/states.xml)
 
