@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>020A_credentials</artifactId>
+    <artifactId>020B_ReadCredentials</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
