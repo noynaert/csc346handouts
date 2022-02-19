@@ -9,7 +9,7 @@ However, if you are on a single-monitor system the internal utility might be mos
 
 ## SQL 020 Reading Credentials
 
-### SQL_02A Reading Passwords
+### SQL_020A Reading Passwords
 
 It isn't a good idea to save password and other credentials in your code.  
 
@@ -102,4 +102,17 @@ public class App {
 }
 
 ```
+#### Method 3 Credentials Overkill with XML
 
+You should feel free to ignore this section.  It is  a fairly extreme example and will only appeal to hard-core geeks.
+
+I wrote a class to read the credentials from an XML file.  I put it in a jar file and and installed it in my local repository.  Now I can stick the XML dependency for the local jar file.  It is very easy.  If you really want to install 
+the jar file, the .jar is in the assignment, and the instructions are [here](https://github.com/noynaert/csc346handouts/blob/main/01_DataExchange/sourceCode/sqlCredentialsInXML/installCredentials.md).
+
+```xml
+<dependency>
+            <groupId>com.noynaert</groupId>
+            <artifactId>credentials</artifactId>
+            <version>0.1</version>
+</dependency>
+```
