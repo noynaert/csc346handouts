@@ -132,5 +132,6 @@ the jar file, the .jar is in the assignment, and the instructions are [here](htt
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.28</version>
+    <dependency>
 </dependencies>
-    ```
+```
