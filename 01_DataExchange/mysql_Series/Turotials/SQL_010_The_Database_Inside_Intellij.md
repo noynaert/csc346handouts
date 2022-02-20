@@ -1,7 +1,45 @@
 # SQL & Java Tutorials
-## SQL 010 The Database Utility in Intellij
 
-[Video](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aff17ae2-57a7-49eb-b144-ae3f002a12de)
+
+  - [Links to the videos.](#links-to-the-videos)
+  - [SQL 010 The Database Utility in Intellij](#sql-010-the-database-utility-in-intellij)
+  - [SQL 020 Reading Credentials](#sql-020-reading-credentials)
+    - [SQL_020A Reading Passwords](#sql_020a-reading-passwords)
+      - [Method 1 (Just the password)](#method-1-just-the-password)
+        - [Code for reading the password](#code-for-reading-the-password)
+      - [Method 2](#method-2)
+        - [code for reading the credentials](#code-for-reading-the-credentials)
+      - [Method 3 Credentials Overkill with XML](#method-3-credentials-overkill-with-xml)
+  - [Direct SQL (with an arraylist and a different type of query)](#direct-sql-with-an-arraylist-and-a-different-type-of-query)
+    - [The mysql dependencies](#the-mysql-dependencies)
+    - [Prepared queries](#prepared-queries)
+
+## Links to the videos.
+
+[Link to the entire folder of videos](https://mwsu.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=2cb68570-2d11-47bd-8a08-ae3f00293648)
+
+* [sql_010](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3be0755a-b167-4f60-b2ba-ae41016b05b0) This video explores the use of the database utility built into Intellij.  It may or may not be of interest.
+* Reading Credentials -- You should probably pick one of the first two methods
+  * [sql_020A](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b78db3da-3975-40fc-9803-ae41016b05ac) This illustrates reading the password from a file
+  * [sql_020B](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5cd81b98-8cce-4430-97bf-ae41016b05ae)  This video is the method I really recommend for reading the password, user, and host from a simple text file
+  * [sql_020C](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3b3db50e-3f2d-4e53-8282-ae41016b05af)  This is how I read the credentials from an XML file.  It is probably overkill.  It might or might not be of interest to the hard-core geeks in the class
+* Full sql Example (with hints for Hmwk 4)
+  *  [sql_030a](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e39000a4-137d-4b19-a71d-ae41016bf41a)  This mainly shows how to copy and paste the dependencies and start the project.  I don't think most people need it, but some might.
+  *  [sql_030b](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b07aebc6-e5b2-4797-bc0d-ae41016c0de8) This illustrates the use of a simple query.  It is different than what we did in class.  It gets a distinct list of cities and states and saves them in an array list.  The list is then used to feed the prepared query
+  *  [sql_030c](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9e0b65c- [SQL & Java Tutorials](#sql--java-tutorials)
+  - [Links to the videos.](#links-to-the-videos)
+  - [SQL 010 The Database Utility in Intellij](#sql-010-the-database-utility-in-intellij)
+  - [SQL 020 Reading Credentials](#sql-020-reading-credentials)
+    - [SQL_020A Reading Passwords](#sql_020a-reading-passwords)
+      - [Method 1 (Just the password)](#method-1-just-the-password)
+        - [Code for reading the password](#code-for-reading-the-password)
+      - [Method 2](#method-2)
+        - [code for reading the credentials](#code-for-reading-the-credentials)
+      - [Method 3 Credentials Overkill with XML](#method-3-credentials-overkill-with-xml)
+  - [Direct SQL (with an arraylist and a different type of query)](#direct-sql-with-an-arraylist-and-a-different-type-of-query)
+    - [The mysql dependencies](#the-mysql-dependencies)
+    - [Prepared queries](#prepared-queries)2-9b45-4579-b6ee-ae41016c1ee4) This uses the prepared statement technique to gather data about each individual city.  It is slow, but it works.
+## SQL 010 The Database Utility in Intellij
 
 Idea/IntelliJ has a database utility built-in.  On a multi-monitor setup I still prefer a freestanding gui client or even the MySQL client at the command line.
 
@@ -135,3 +173,11 @@ the jar file, the .jar is in the assignment, and the instructions are [here](htt
     </dependency>
 </dependencies>
 ```
+
+[Here is a link to the code](01_DataExchange/mysql_Series/Source_Code/030_Full_SQL_Program.pdf).  This applies to the rest of this document.  I made it a .pdf because I didn't want pure copy/paste for homework 04.
+
+The direct code creates an ArrayList containing Strings.  The strings are a city name and state.  It is a tab-delimited string in this example
+
+### Prepared queries
+
+The example [in the code](01_DataExchange/mysql_Series/Source_Code/030_Full_SQL_Program.pdf) illustrates how prepared statements may be used to fetch the data for each city. 
