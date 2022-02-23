@@ -1,0 +1,15 @@
+jbutt@gmail.com;James;Butt;New Orleans;LA
+josephine_darakjy@darakjy.org;Josephine;Darakjy;Brighton;MI
+art@venere.org;Art;Venere;Bridgeport;NJ
+lpaprocki@hotmail.com;Lenna;Paprocki;Anchorage;AK
+donette.foller@cox.net;Donette;Foller;Hamilton;OH
+simona@morasca.com;Simona;Morasca;Ashland;OH
+mitsue_tollner@yahoo.com;Mitsue;Tollner;Chicago;IL
+leota@hotmail.com;Leota;Dilliard;San Jose;CA
+sage_wieser@cox.net;Sage;Wieser;Sioux Falls;SD
+kris@gmail.com;Kris;Marrier;Baltimore;MD
+minna_amigon@yahoo.com;Minna;Amigon;Kulpsville;PA
+amaclead@gmail.com;Abel;Maclead;Middle Island;NY
+kiley.caldarera@aol.com;Kiley;Caldarera;Los Angeles;CA
+gruta@cox.net;Graciela;Ruta;Chagrin Falls;OH
+calbares@gmail.com;Cammy;Albares;Laredo;TX
