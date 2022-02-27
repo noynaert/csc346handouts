@@ -2,6 +2,12 @@
 
 [Links to the video folder](https://mwsu.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=d3ef0ce2-7959-429b-ad65-ae49006320c1)
 
+Video|Notes
+:---:|:---
+[005 Wrappers and Boxing](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=35d0ec89-64da-44c6-b8ab-ae490064ff87)|This is about wrapper classes and boxing.  It may be helpful in understanding how to handle integers in Homework 05.
+[010 Basic](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ddc57ecf-fd09-415d-bd6f-ae490064ff7a)|This is mostly a repeat of what we did in class. Feel free to skip it if you understand what is going on with Maps.
+[020 Going Generic](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cb53b389-89e4-431c-bf0c-ae490064ff74)|I did this in class, but it was rushed.  It covers an idea that will become more important from here on in the course.  We use a Superclass to declare a variable, even though the class is abstract and we cannot create an instance of the class
+[030 Counting Lotto Picks](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=01ad6692-098b-4c12-9f22-ae490064ff77)|This should be helpful in Homework 05.  It is counting how often lotto numbers have occurred.
 
 This video is a quick introduction for Java Maps.  It is being produced for CSC 346, but I will try
 to keep it general enough for reference.
