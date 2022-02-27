@@ -1,6 +1,7 @@
 # 01 Maps
 
-Links to the videos
+[Links to the video folder](https://mwsu.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=d3ef0ce2-7959-429b-ad65-ae49006320c1)
+
 
 This video is a quick introduction for Java Maps.  It is being produced for CSC 346, but I will try
 to keep it general enough for reference.
