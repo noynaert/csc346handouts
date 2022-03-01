@@ -29,7 +29,7 @@ public class App {
 
     public static void tossException() {
 
-        log.info("Entering tossExceptoin()");
+        log.info("Entering tossException()");
         try {
             Scanner bigDummy = new Scanner(new File("notThere.txt"));
             bigDummy.close();

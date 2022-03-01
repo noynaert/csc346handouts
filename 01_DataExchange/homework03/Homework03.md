@@ -1,5 +1,26 @@
 # XML assignment
 
+- [XML assignment](#xml-assignment)
+  - [Roles](#roles)
+  - [Reference articles:](#reference-articles)
+  - [Groups of XML Parsers](#groups-of-xml-parsers)
+    - [Group 2](#group-2)
+    - [Group 3](#group-3)
+    - [Group 4](#group-4)
+    - [Group 5](#group-5)
+    - [Group 6](#group-6)
+    - [Group 7](#group-7)
+    - [Group 8](#group-8)
+  - [The assignment](#the-assignment)
+    - [Examples you should use](#examples-you-should-use)
+  - [Github and Markdown](#github-and-markdown)
+    - [Markdown](#markdown)
+      - [Clone and modify your group page in this repo](#clone-and-modify-your-group-page-in-this-repo)
+  - [The woz.xml file](#the-wozxml-file)
+
+
+---
+
 A significant component of this assignment is demonstrating that you can learn technical material on your own.  Most of your groups will have software assigned that the instructor does not know.  *You* will become the local expert on that software.  Some people will be experts on the xml software.  Others will polish their Github and Markdown skills.
 
 ## Roles
@@ -18,13 +39,13 @@ I think in most cases some groups will combine roles.  For example, two people m
 
 ## Groups of XML Parsers
 
-* 2. DOM Parsers  -- Read the entire XML file into memory
-* 3. SAX parsers -- Only reads the parts that are needed into memory
-* 4. StAX Parser -- Median between a DOM and SAX parser
-* 5. JAXB -- Converts objects to/from XML
-* 6. XStream -- Converts XML to/from serializable object
-* 7. Jackson XML 
-* 8. Simple XML
+* &nbsp;2. DOM Parsers  -- Read the entire XML file into memory
+* &nbsp;3. SAX parsers -- Only reads the parts that are needed into memory
+* &nbsp;4. StAX Parser -- Median between a DOM and SAX parser
+* &nbsp;5. JAXB -- Converts objects to/from XML
+* &nbsp;6. XStream -- Converts XML to/from serializable object
+* &nbsp;7. Jackson XML 
+* &nbsp;8. Simple XML
 
 Groups are based on the [https://www.baeldung.com/java-xml](https://www.baeldung.com/java-xml) article category.  Start by reading through your section and checking out the resources listed.
 
@@ -82,7 +103,7 @@ Illustrate input and output using Jackson
 * Nicholas Wu
 
 
-# Group 8
+### Group 8
 
 Illustrate Input and Output using Simple XML
 
@@ -103,7 +124,7 @@ Each group should write a tutorial with working examples.
 
 You should have examples that parse the three following items of code.  It is fine to load the first and third from a local file because the data is not dynamic.  However, the weather data should come from live data at the URL.  (NOAA will not run out of page views late in the month).
 
-* [A simple xml file](zzwoz.xml) Be sure to pull the password hint which is an attribute.
+* [A simple xml file](https://raw.githubusercontent.com/noynaert/csc346handouts/main/01_DataExchange/homework03/zz_woz.xml) Be sure to pull the password hint which is an attribute.
 * [Nested XML file](https://w1.weather.gov/xml/current_obs/KSTJ.xml) Don't get distracted by the xsl(Ignore the main web page and view the source).  You don't need to extract all of the fields, but do some fields that are at the top level and some that are nested.  For example, do observation_time_rfc822 or the &lt;image>&lt;url>
 * [An array expressed as XML](https://civilserviceusa.github.io/us-states/data/states.xml)
 
@@ -114,6 +135,8 @@ Some groups will need to create POJOs of the objects.  The POJOs do not need to 
 Some groups will need to serialize their data.  It may be easier to serialize the full object, or you might just create a limited serializable object.
 
 ## Github and Markdown
+
+:bulb: I just found [this Markdown Tutorial](https://youtu.be/ftOBvusMHjQ).  The first 9 minutes are probably all you need.  But I learned some stuff after 9 minutes
 
 Each group will need a repository.  I have a fantasy that all members of your team will use the repository to upload and download the files that they are contributing.  But it is OK if your team librarian collects the information and posts it for the group.
 

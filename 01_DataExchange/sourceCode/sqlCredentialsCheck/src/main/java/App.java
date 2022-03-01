@@ -85,7 +85,7 @@ public class App {
             PreparedStatement stmt;
             stmt = con.prepareStatement(query);
             stmt.setString(1,s2);
-            `
+
 
             ResultSet rs = stmt.executeQuery();
             while(rs.next()){
