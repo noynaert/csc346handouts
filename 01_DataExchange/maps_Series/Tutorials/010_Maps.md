@@ -37,4 +37,6 @@ Null keys|One null key allowed|No null key|No null key
 Null values|Allowed|Not Allowed|Multiple keys may have null values
 Requires<br>equals() and hashcode()|Yes|No|No (I think)
 
-Reference: [https://examples.javacodegeeks.com/java-map-example/](https://examples.javacodegeeks.com/java-map-example/)
+## References: 
+
+* [https://examples.javacodegeeks.com/java-map-example/](https://examples.javacodegeeks.com/java-map-example/)
