@@ -1,0 +1,23 @@
+{
+  "post code": "64506",
+  "country": "United States",
+  "country abbreviation": "US",
+  "climate": {
+    "zone": "Great Plains",
+    "FDA zone": "5B"
+  },
+  "places": [
+    {
+      "place name": "Saint Joseph",
+      "longitude": "-94.8043",
+      "state": "Missouri",
+      "state abbreviation": "MO",
+      "latitude": "39.7893"
+    },
+    {
+      "place name": "Savanah",
+      "state": "Missouri",
+      "state abbreviation": "MO"
+    }
+  ]
+}
