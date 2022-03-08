@@ -32,4 +32,5 @@ public class App {
         Person p4 = gson.fromJson(s,Person.class);
         System.out.println(p4);
     }
+
 }
