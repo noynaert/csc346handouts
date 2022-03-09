@@ -43,6 +43,12 @@ public class App {
             stmt.setString(2, "Missouri");
 
             ResultSet rs = stmt.executeQuery();
+            boolean foundRecord = rs.next();
+            if(foundRecord){
+                System.out.println("At least one record was found");
+            }else{
+                System.out.println("No records found");
+            }
 
             while(rs.next()){
                 String  state = rs.getString("city");

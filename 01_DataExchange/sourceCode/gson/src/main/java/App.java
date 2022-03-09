@@ -14,11 +14,11 @@ import java.util.TreeMap;
 
 public class App {
     public static void main(String[] args){
-        testPerson();
-        obj2json();
-        arrayList2json();
+//        testPerson();
+//        obj2json();
+//          arrayList2json();
         map2json();
-        System.out.println("\nDone!");
+//        System.out.println("\nDone!");
     }
     public static void arrayList2json(){
         ArrayList<Person> people = new ArrayList<>();
@@ -77,10 +77,17 @@ public class App {
         System.out.println(pn);
         System.out.println(new Person() );
     }
-    public static void dump(String fileName, String s){
+
+    /**
+     * Prints a json string to a file.
+     *
+     * @param fileName -- The name of the file to be written to
+     * @param json -- The json as a string
+     */
+    public static void dump(String fileName, String json){
         try {
             FileWriter fw = new FileWriter(fileName);
-            fw.write(s);
+            fw.write(json);
             fw.flush();
             fw.close();
         } catch (IOException e) {
