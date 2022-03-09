@@ -4,15 +4,16 @@
 
 Listed alphabetically
 
-* Person 1, coder [LinkedIn](.) [Github](.)
-* Person 2, librarian [LinkedIn](.)
-* Person 3, writer [LinkedIn](.) [Github](.) [Instagram](.)
-* Person 4, coder and assistant librarian [Github](.)
+* Cooper Jones, coder [Github](https://github.com/cjones35)
+* Gabriel Adams, writer [Github](https://github.com/GabeAdams2)
+* Josh Mesmer, writer [Github](https://github.com/Jmesmer)
+* Marshall Stone, librarian [Github](https://github.com/mstone9)
+
 
 ## Your task
 
-A very, very brief summary
+Our mission is to demonstrate the usage of Simple XML and the simple framework.
 
 ## Link to your repo
 
-[I am a link](https://github.com/noynaert/csc346handouts)
+[Simple XML Tutorial](https://github.com/mstone9/Simple-XML)
