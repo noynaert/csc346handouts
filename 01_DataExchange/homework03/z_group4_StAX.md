@@ -4,15 +4,11 @@
 
 Listed alphabetically
 
-* Person 1, coder [LinkedIn](.) [Github](.)
-* Person 2, librarian [LinkedIn](.)
-* Person 3, writer [LinkedIn](.) [Github](.) [Instagram](.)
-* Person 4, coder and assistant librarian [Github](.)
-
-## Your task
-
-A very, very brief summary
+* Cole Atkinson, coder
+* Riley McNeely, writer 
+* Kaleb Morcha, librarian [Github](https://github.com/kmorcha18) Email: kmorcha@missouriwestern.edu
+* Luke Townsend, coder
 
 ## Link to your repo
 
-[I am a link](https://github.com/noynaert/csc346handouts)
+[I am a link](https://github.com/kmorcha18/CSC346group4)
