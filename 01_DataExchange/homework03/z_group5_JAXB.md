@@ -4,15 +4,15 @@
 
 Listed alphabetically
 
-* Person 1, coder [LinkedIn](.) [Github](.)
-* Person 2, librarian [LinkedIn](.)
-* Person 3, writer [LinkedIn](.) [Github](.) [Instagram](.)
-* Person 4, coder and assistant librarian [Github](.)
+* Aaron Grant, coder
+* Will Malita, librarian
+* Melissa Bayer, writer
+* Christin Wilson, coder
 
 ## Your task
 
-A very, very brief summary
+Create a tutorial about JAXB
 
 ## Link to your repo
 
-[I am a link](https://github.com/noynaert/csc346handouts)
+[Link to our repo!](https://github.com/abg5043/JAXBTutorial)
