@@ -1,0 +1,115 @@
+#!/usr/bin/bash
+
+## Takes apart a canvas download and processes each 
+## student's assignment
+##
+## noynaert
+## September 2021
+##
+## Written for hmwk01
+## Must be in the directory with student files
+## and data.*.txt files
+
+# set colorizing
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NOCOLOR='\033[0m'
+
+# process clean ars arg[1]
+if [[ "$1" == 'clean' ]]
+  then
+     printf "${GREEN}Cleaning directories${NOCOLOR}\n"
+	 rm ~/000tmp/*.txt
+	 for f in *
+	   do
+		 if [[ -d "$f" ]]
+		   then
+		      echo "  Removing directory $f"
+			  rm -r $f
+		   fi
+	   done
+	 exit 0
+  fi
+
+# remove the -1, -2, -3 file tags that canvas adds for multiple submissions.
+# requires sudo apt install replace on .deb systems.
+rename 's/-\d\.java$/\.java/' *.java
+
+
+for f in *.java; do
+
+   #get student name
+   echo "Processing $f"
+   student=$(echo $f | cut -d _ -f 1)
+   echo $student
+
+   #Get java file name
+   jName=${f##*_}
+   #echo $jName
+   
+   #Does the file exist?  If so, remove
+   if [ -d $student ]; then
+      rm -r $student
+   fi
+
+   #make dir and copy file file
+   mkdir $student
+      #remove the package, and copy the file to the directory
+   sed 's/^\s*package\s/\/\/package /' $f > $student/$jName
+   
+   #go to the directory and operate on the file(s)
+   cd $student
+
+   #cleanup  (Probably not needed because the directories are recreated each pass)
+   if [ -f out.txt ];then
+      rm out.txt
+   fi
+   if [ -f *.class ];then
+      rm *.class
+   fi
+
+
+   #start out.txt with source code
+   for j in *.java 
+   do
+        pr -n -h "$student $j" $j > out.txt
+      javac *.java &>> out.txt
+      if [ $? -eq 0 ]; then
+         printf "   ${GREEN}Successful compile${NOCOLOR} of $j\n"
+         cowsay "Successful Compile! of $j" >> out.txt
+         for data in ../data*.txt; do
+            echo "------------------------------ input $data -----------------------------" >> out.txt
+            echo "Data is $(cat $data)" >> out.txt
+            echo >> out.txt
+            if [ -e ${j%%.java}.class ];then
+              echo >> out.txt
+              java ${j%%.java} < $data &>> out.txt
+              if [ $? -ne 0 ]; then
+                 cowsay -d "Run aborted" >> out.txt
+              fi
+              echo >> out.txt
+            fi
+         done
+      else
+         cowsay -d "Compile of $j Failed" >> out.txt
+         printf "   ${RED}FAILED TO COMPILE $j${NOCOLOR}\n"
+      fi
+	   cp out.txt "$student.txt"
+	   cp "$student.txt" ~/000tmp
+   done
+   
+#   cowsay -f /home/noynaert/cowsay-files/cows/ackbar.cow  "IT'S A TRAP!  The last run should have ended in an error because the input was text, not a number." >> out.txt
+#   rm *.pdf
+#   rm *.ps
+#   a2ps -o out.ps --landscape out.txt > /dev/null
+#   ps2pdf14 out.ps out.pdf > /dev/null
+
+
+
+   # Go back to parent
+   cd ..
+
+   #sleep 1
+   
+
+done
