@@ -1,16 +1,18 @@
 /**
- *   The name file is a sub-class of Person.  It reverses the first name and last name.
+ * The name file is a sub-class of Person. It reverses the first name and last
+ * name.
  */
 
-public class Name{
+public class Name {
     String first;
     String last;
 
-    public Name(String first, String last){
+    public Name(String first, String last) {
         setFirst(first);
         setLast(last);
     }
-    public Name(){
+
+    public Name() {
         this("?First?", "?Last?");
     }
 
@@ -29,8 +31,9 @@ public class Name{
     public void setLast(String last) {
         this.last = last;
     }
+
     @Override
-    public String toString(){
+    public String toString() {
         String s = last + ", " + first;
         return s;
     }
