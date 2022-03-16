@@ -1,0 +1,100 @@
+#!/usr/bin/bash
+
+# mvn 
+
+# set colorizing
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NOCOLOR='\033[0m'
+
+STUDENT="unknown"
+ROOTDIR=$(pwd)
+echo "The root is ${ROOTDIR}"
+
+function clean {
+     printf "$GREEN Cleaning directories $NOCOLOR\n"
+	 rm ~/000tmp/*.txt
+	 for f in *
+	   do
+		 if [[ -d "$f" ]]
+		   then
+		      echo "  Removing directory $f"
+			  rm -r $f
+		   fi
+	   done
+}
+
+function processZips {
+    echo "Processing Zips"
+    rm ~/000.tmp/*.txt
+    for f in *.zip ; do
+        student=$(echo $f | cut -d _ -f 1)
+        printf "\n\tProcessing $student\n"
+        if [[ -d $student ]] ; then
+            rm -r $student
+        fi 
+        
+        # make dir and copy file
+        mkdir $student
+        cp $student*.zip $student
+
+        #unzip the file
+        cd $student
+        ls
+        unzip *.zip > /dev/null
+
+        ## process the zap
+        for hmwk in * ; do
+           if [[ -d $hmwk ]] ; then
+                cd $hmwk
+                printf "$RED I am in $(pwd) $NOCOLOR\n"
+                ls
+                if [[ -e out.txt ]] ; then  rm out.txt ;fi
+                if [[ -e $student.txt ]] ; then rm $student.txt ; fi
+                if [[ -e *.log ]] ; then rm *.log ; fi
+                if [[ -e pom.xml ]] ; then  printf "\tpom.xml exists for $student \n" ; fi
+                cowsay -f duck $student > out.txt
+                #dump the source files
+               
+                ## -print0 uses null as line separator
+                echo "-----Searching for java files"
+                find . -name '*.java' -print0 | while read -d $'\0' file
+                do
+                    printf "\n=============== FILE NAME: $file  ===============================\n" >> out.txt
+                    cat -n $file >> out.txt
+                    printf "\n\f\n" >> out.txt
+                done
+                
+                mvn clean
+                mvn package
+                if [[ -e target/app-jar-with-dependencies.jar ]] ; then
+                    cowsay "target/app-jar-with-dependencies.jar exists"  >> out.txt
+                    java -jar target/app-jar-with-dependencies.jar &>> out.txt
+                else
+                    cowsay -d "target/app-jar-with-dependencies.jar does not exist.\nManual processing required." >> out.txt
+                fi
+                if [[ -e *.log ]] ; then cat *.log >> out.txt ; fi
+
+                ## finally, copy the outfile to tmp
+                cp out.txt ~/000tmp/$student.txt
+
+                
+            fi
+        done
+        
+        
+        # Return to assignment root
+        cd $ROOTDIR
+
+
+    done
+}
+######  Main method #######
+
+if [[ "$1" == 'clean'  ]] ; then
+    echo "${GREEN}Cleaning${NOCOLOR}"
+    clean
+else
+    echo "Not Cleaning"
+    processZips
+fi
