@@ -34,7 +34,7 @@ public class App {
             //https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/JsonObject.html
             Gson gson = new Gson();
             Map<String, JsonObject> things = gson.fromJson(longLine, Map.class);
-            JsonObject thing = things.get("GBP");
+            JsonObject thing = things.get("eur");
             String name = "";
             double exchangeRate=0.0;
             if(thing.has("name")){
