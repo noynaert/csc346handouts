@@ -1,8 +1,10 @@
 package com.noynaert.csc346.inheritance.people;
 
 
+import java.util.ArrayList;
+
 // Student isa Person
-public class Student extends Person {
+public class Student extends Person implements isAssignedClasses {
     double gpa;
     int creditHours;
     private ClassRank rank;
@@ -53,5 +55,21 @@ public class Student extends Person {
         String result = super.toString();
         result += String.format(" GPA: %1.3f Credit Hours: %3d (%s)", this.gpa, creditHours, rank);
         return result;
+    }
+
+    @Override
+    public String getStatus() {
+        //in a real example, I would either reference a local variable or pull information from a database.
+        String status = "Good academic standing";
+        if(gpa < 2.0 && creditHours > 0)
+            status = "Probation";
+        else if (gpa < 0.)
+            status = "Suspended";
+        return status;
+    }
+
+    @Override
+    public ArrayList<Object> getSchedule() {
+        return null;
     }
 }

@@ -12,15 +12,29 @@ import java.util.Map;
 
 public class App {
     public static void main(String[] args){
-        Person pn = new Person("x","y");
+        Person pn = new Student("x","y", 0.0, 0);
         pn.setName("Max Griffon");
         pn.setNumber("G00000000");
+
+        Person fac = new Faculty();
+        System.out.println("fac is Person? " + (fac instanceof Person) );
+        System.out.println("fac is student? " + (fac instanceof Student) );
+        System.out.println("fac is Employee? " + (fac instanceof Employee) );
+        System.out.println("fac is Faculty? " + (fac instanceof Faculty) );
+        System.out.println("fac is Assigned Classes? " + (fac instanceof isAssignedClasses) );
+
+
+        System.out.println("is Person? " + (pn instanceof Person) );
+        System.out.println("is Student? " + (pn instanceof Student));
 
         System.out.println(pn);
 
         Student stu = new Student("Joe Cool", "G00000007", 2.000, 55);
         stu.setName("Maxine Griffon");
         stu.setNumber("G00000001");
+
+        System.out.println("is Student? " + (stu instanceof Person) );
+        System.out.println("is Student? " + (stu instanceof Student));
 
         System.out.println(stu);
 
@@ -32,7 +46,7 @@ public class App {
         Map<String,Person> m = new HashMap<>();
         m.put(pn.getNumber(), pn);
         m.put(stu.getNumber(), stu);
-        m.put("Fred", new Person("Fred","G99999999"));
+       // m.put("Fred", new Person("Fred","G99999999"));
         m.put("Barney", new Student("Barney", "G99999997", 4.000, 99));
 
         //demonstrate Exceptions

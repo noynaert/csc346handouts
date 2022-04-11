@@ -1,10 +1,11 @@
 package com.noynaert.csc346.inheritance.people;
 
-public class Person extends Object implements Comparable<Person>{
+public abstract class Person extends Object implements Comparable<Person>{
     String name;
     String number;
+    final int MAX_NAME_LENGTH = 20;
 //
-//    public Person(String name, String number) {
+//    public Person(String name, String number, 0.0, 0) {
 //       setName(name);
 //       setNumber(number);
 //    }
@@ -13,6 +14,9 @@ public class Person extends Object implements Comparable<Person>{
     public Person(String name, String number) {
         this.name = name;
         this.number = number;
+    }
+    public Person(){
+        this("unknown", "G000000");
     }
 
     public String getName() {
@@ -33,10 +37,18 @@ public class Person extends Object implements Comparable<Person>{
 
     @Override
     public String toString() {
-        return "Person{" +
+        String s = "Person{" +
                 "name='" + name + '\'' +
                 ", number='" + number + '\'' +
                 '}';
+
+        //The following is a BAD use of instanceOf
+/*
+        if(this instanceof Student){
+            s = "Custom string for students";
+        }
+*/
+        return s;
     }
 
 
@@ -49,4 +61,5 @@ public class Person extends Object implements Comparable<Person>{
         int result = this.number.compareTo(o.number);
         return 0;
     }
+    public abstract String getStatus();
 }

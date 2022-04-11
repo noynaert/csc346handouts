@@ -1,4 +1,4 @@
 package com.noynaert.csc346.inheritance.people;
 
-public class Employee {
+public abstract class Employee extends Person{
 }
