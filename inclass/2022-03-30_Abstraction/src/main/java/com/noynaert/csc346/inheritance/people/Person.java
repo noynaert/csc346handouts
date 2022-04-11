@@ -1,6 +1,6 @@
 package com.noynaert.csc346.inheritance.people;
 
-public class Person implements Comparable<Person>{
+public class Person extends Object implements Comparable<Person>{
     String name;
     String number;
 //

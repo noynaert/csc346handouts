@@ -18,7 +18,7 @@ public class App {
 
         System.out.println(pn);
 
-        Student stu = new Student();
+        Student stu = new Student("Joe Cool", "G00000007", 2.000, 55);
         stu.setName("Maxine Griffon");
         stu.setNumber("G00000001");
 
@@ -33,7 +33,36 @@ public class App {
         m.put(pn.getNumber(), pn);
         m.put(stu.getNumber(), stu);
         m.put("Fred", new Person("Fred","G99999999"));
-        m.put("Barney", new Student("Barney", "G99999997", 4.000));
+        m.put("Barney", new Student("Barney", "G99999997", 4.000, 99));
+
+        //demonstrate Exceptions
+
+        Person[] people = new Person[10];
+        try {
+            people[9] = pn;
+            char ch = pn.getName().charAt(0);
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.err.println("Array index out of bounds." +e.getMessage());
+        }catch(StringIndexOutOfBoundsException e){
+            System.err.println("STRING index is out of bounds." + e.getMessage());
+        }
+        int i;
+        try {
+            i = 99 / 0;
+            System.out.println("I is " +i);
+            people[999] = pn;
+            char ch = pn.getName().charAt(99);
+        }catch(ArithmeticException e){
+            i = Integer.MAX_VALUE;
+        }catch(Exception e) {
+            System.err.println("Either the array or string subscript is out of bounds, "
+                               +"but I do not know which. "+ e.getMessage()
+            );
+        }finally{
+            //a sample of something that would appear in a finally{} clause would be closing a stream
+            //another example would be logging.
+            System.out.println("I survived the exceptions");
+        }
         System.out.println("\nDone!");
     }
     public static void print(){
