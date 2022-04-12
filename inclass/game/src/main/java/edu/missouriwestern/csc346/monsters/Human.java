@@ -41,6 +41,12 @@ public abstract class Human extends Critter implements Defender {
         return result;
     }
 
+    /**
+     *
+     * @param gender  Setting the gender to MALE or FEMALE automatically changes the image.
+     *                Setting the gender to NONBINARY sets the image randomly, although it
+     *                may later be set with setImageCharacter()
+     */
     public void setGender(Gender gender) {
         switch (gender) {
             case MALE:

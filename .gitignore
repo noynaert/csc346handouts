@@ -122,3 +122,5 @@ password.txt
 passwords.txt
 target
 target/*
+
+!.gitignore

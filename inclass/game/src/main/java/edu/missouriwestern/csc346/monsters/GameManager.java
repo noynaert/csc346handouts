@@ -98,7 +98,9 @@ final public class GameManager {
                 attacker.body.attack();//sets attack effectiveness and message
                 displayMessage(attacker.name + " " + attacker.body.getAttackMessage());
                 damage = Math.random() * attacker.body.getAttackEffectiveness();
-                if (defender instanceof Defender) {
+                defender.body.defend();
+                String defenseMessage = defender.body.getDefenseMessage();
+                if (defender instanceof Defender  || defenseMessage.length()>0) {
                     defender.body.defend();
                     displayMessage(defender.body.getDefenseMessage());
                     double reduction = 0.1 * Math.random() * defender.body.getDefenseEffectiveness();

@@ -22,7 +22,7 @@ import java.util.Objects;
  *                   Weight was supposed to factor into survivability, but it is not
  *                   really used in the current version
  * stamina:double -- 1.0 for a healthy adult human.  Not really used in current except to set starting health.
- * stamina:double -- 1.0 is 100% health.  It cannot be over 100% at the start of the game
+ * health:double  -- 1.0 is 100% health.  It cannot be over 100% at the start of the game
  *                   and it should not increase unless the game incorporates recovery
  *                   Anything less than 0.0 is dead
  *                   Essentially, health is the percentage of life.
@@ -69,7 +69,7 @@ abstract public class Critter {
     private String attackMessage;
     private double attackEffectiveness;
     private double defenseEffectiveness;
-    private String defenseMessage;
+    private String defenseMessage = "";
     String imageCharacter;
 
     public Critter(String critterName, double weight, double stamina, double health, double aggressiveness, String imageCharacter) {

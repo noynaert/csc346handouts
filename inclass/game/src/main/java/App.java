@@ -14,6 +14,10 @@ import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args){
+
+        char ch = '\uD83D';
+        char ch2='\uDC35';
+        String animal = "\uD83D\uDC35";
         Player p = new Player ("Ptomain Tony", new Cook());
         Player q = new Player("Broccoli Spears", new Cook());
         ArrayList<Player> roster = new ArrayList<>();

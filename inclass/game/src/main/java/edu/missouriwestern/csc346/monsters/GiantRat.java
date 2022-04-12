@@ -17,3 +17,4 @@ public class GiantRat extends Critter{
         setAttackEffectiveness(0.25);
     }
 }
+

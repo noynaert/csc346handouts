@@ -15,7 +15,7 @@ public class Cook extends Human{
             whisk
         }
         Weapon weapon = null;
-        int choice = (int) Math.floor(Math.random() * 6.0);
+        int choice = (int) (Math.random() * 6.0);
         switch (choice) {
             case 0:
             case 1:
