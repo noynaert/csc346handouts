@@ -46,9 +46,11 @@ final public class GameManager {
     public Player contest(ArrayList<Player> roster) {
         Player winner = null;
         int round = 0;
-        while (roster.size() > 1) {
+        int roundLimit = roster.size() * roster.size();
+        while (roster.size() > 1 && round < roundLimit) {
             Collections.shuffle(roster);
-            displayRoundStart(roster, round);
+            round++;
+            displayRoundStart(roster, round, roundLimit);
 
             //Pair off adjacent players.  If one is left, then they get a bye.
             for (int i = 0; i < roster.size(); i += 2) {
@@ -58,12 +60,14 @@ final public class GameManager {
                     Player p1 = roster.get(i);
                     Player p2 = roster.get(i + 1);
                     fightAnnouncement(p1, p2);
-
-                    while (p1.body.isAlive() && p2.body.isAlive()) {
+                    int attackCount = 0;
+                    int attackLimit = 10;
+                    while (p1.body.isAlive() && p2.body.isAlive() && attackCount < attackLimit) {
                         onePlayerAttack(p1, p2);
                         onePlayerAttack(p2, p1);
                         //Announce the results
                         displayMessage(String.format("%s at %1.0f%%, %s at %1.0f%%", p1.getName(), p1.body.getHealth() * 100.0, p2.getName(), p2.body.getHealth() * 100.0));
+                        attackCount++;
                     }
                 }
             }
@@ -80,9 +84,21 @@ final public class GameManager {
             }
 
         }
-        if (roster.size() > 0) {
+        winner = null;
+        if (roster.size() == 1) {
             winner = roster.get(0);
             displayMessage("\uD83C\uDFC6 " + winner + " WINS! \uD83C\uDFC6");
+        } else if (roster.size() > 1) {
+            displayMessage("That round went the distance.  Both players survived to fight another day!\n");
+            displayMessage("There were " + roster.size() + " multiple survivors!");
+            double bestHealthSoFar = Double.MIN_VALUE;
+            for (Player p : roster) {
+                displayMessage("    ---- " + p + " survived");
+                if (p.body.getHealth() > bestHealthSoFar) {
+                    bestHealthSoFar = p.body.getHealth();
+                    winner = p;
+                }
+            }
         } else {
             displayMessage("EVERYONE DIED.  THERE WAS NO WINNER!");
             winner = null;
@@ -100,7 +116,7 @@ final public class GameManager {
                 damage = Math.random() * attacker.body.getAttackEffectiveness();
                 defender.body.defend();
                 String defenseMessage = defender.body.getDefenseMessage();
-                if (defender instanceof Defender  || defenseMessage.length()>0) {
+                if (defender instanceof Defender || defenseMessage.length() > 0) {
                     defender.body.defend();
                     displayMessage(defender.body.getDefenseMessage());
                     double reduction = 0.1 * Math.random() * defender.body.getDefenseEffectiveness();
@@ -133,10 +149,10 @@ final public class GameManager {
         }
     }
 
-    private void displayRoundStart(ArrayList<Player> roster, int round) {
+    private void displayRoundStart(ArrayList<Player> roster, int round, int roundLimit) {
 
         String s = "";
-        s += String.format("═════════ Round %d .  Maximum remaining rounds: %d ══════════\n", ++round, (int) Math.ceil(log2(roster.size())));
+        s += String.format("═════════ Round %d .  Maximum remaining rounds: %d ══════════\n", round, roundLimit);
         for (int i = 0; i < roster.size(); i++) {
             s += String.format("  %d %s\n", i, roster.get(i));
         }
