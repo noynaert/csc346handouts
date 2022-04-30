@@ -3,15 +3,8 @@ import edu.missouriwestern.csc346.monsters.GameManager;
 import edu.missouriwestern.csc346.monsters.GiantRat;
 import edu.missouriwestern.csc346.monsters.Player;
 
-
 import java.util.ArrayList;
 
-/**
- * Driver for console version of fight game
- *
- * @author your name for your version
- * @since April 2022
- */
 
 public class App {
     public static void main(String[] args){
