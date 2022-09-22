@@ -1,4 +1,4 @@
-"entity","url","gec","iso_3166","stanag_code","internet_code","comment"
+entity,url,gec,iso_3166,stanag_code,internet_code,comment
 "Afghanistan","/the-world-factbook/countries/afghanistan/","AF","004","AFG",".af"," "
 "Akrotiri","/the-world-factbook/countries/akrotiri/","AX","---","-","-"," "
 "Albania","/the-world-factbook/countries/albania/","AL","008","ALB",".al"," "
