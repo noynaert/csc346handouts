@@ -1,0 +1,1 @@
+cat us-governors.csv | awk -F ','  '{print $4 $1 $8}' |  sed  -e '/$state/d'   -e '/^$/d' -e 's/\"\"/\t/g' -e 's/\"//g' | sort -R > data.txt

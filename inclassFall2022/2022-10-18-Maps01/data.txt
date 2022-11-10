@@ -1,0 +1,51 @@
+ok	Oklahoma	Kevin Stitt
+il	Illinois	J.B. Pritzker
+va	Virginia	Ralph Northam
+co	Colorado	Jared Polis
+ne	Nebraska	John Ricketts
+ri	Rhode Island	Daniel McKee
+or	Oregon	Katherine Brown
+wv	West Virginia	James Justice
+mn	Minnesota	Tim Walz
+nv	Nevada	Steve Sisolak
+ca	California	Gavin Newsom
+al	Alabama	Kay Ivey
+ar	Arkansas	Asa Hutchinson
+ms	Mississippi	Tate Reeves
+nm	New Mexico	Michelle Lujan Grisham
+mi	Michigan	Gretchen Whitmer
+sc	South Carolina	Henry McMaster
+nj	New Jersey	Philip Murphy
+hi	Hawaii	David Ige
+ky	Kentucky	Andy Beshear
+wa	Washington	Jay Inslee
+ma	Massachusetts	Charles Baker
+la	Louisiana	John Edwards
+tx	Texas	Gregory Abbott
+oh	Ohio	Michael DeWine
+md	Maryland	Lawrence Hogan
+nc	North Carolina	Roy Cooper
+state_code_slugstate_namename
+wy	Wyoming	Mark Gordon
+wi	Wisconsin	Tony Evers
+mo	Missouri	Michael Parson
+pa	Pennsylvania	Thomas Wolf
+ga	Georgia	Brian Kemp
+ut	Utah	Spencer Cox
+ny	New York	Andrew Cuomo
+az	Arizona	Douglas Ducey
+nh	New Hampshire	Christopher Sununu
+id	Idaho	Brad Little
+sd	South Dakota	Kristi Noem
+ks	Kansas	Laura Kelly
+me	Maine	Janet Mills
+ia	Iowa	Kimberly Reynolds
+ct	Connecticut	Edward Lamont
+in	Indiana	Eric Holcomb
+de	Delaware	John Carney
+nd	North Dakota	Douglas Burgum
+fl	Florida	Ronald DeSantis
+tn	Tennessee	Bill Lee
+vt	Vermont	Philip Scott
+mt	Montana	Greg Gianforte
+ak	Alaska	Mike Dunleavy
