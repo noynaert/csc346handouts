@@ -27,16 +27,21 @@ public class Main {
     private static ArrayList<Person> getPeople(String fileName) throws SQLException {
         ArrayList<Person> people = new ArrayList<>();
         String connectionString = "jdbc:mariadb://woz.csmp.missouriwestern.edu:3306/misc";
-        String queryString = "SELECT * from fakePeople WHERE state like 'NY' AND city LIKE 'New York'";
+        String queryString = "SELECT * from fakePeople WHERE state like ? AND city LIKE ?";
 
         Credentials woz = new Credentials(fileName);
         System.out.println(woz.host);
 
         Connection connection = DriverManager.getConnection(connectionString,woz.user, woz.password);
 
-        Statement foundation  = connection.createStatement();
-        ResultSet rs = foundation.executeQuery(queryString);
+//        Statement foundation  = connection.createStatement();
+//        ResultSet rs = foundation.executeQuery(queryString);
+          PreparedStatement preparedStatement = connection.prepareStatement(queryString);
 
+          preparedStatement.setString(1,"IL");
+          preparedStatement.setString(2,"Chicago");
+
+        ResultSet rs = preparedStatement.executeQuery();
         while(rs.next()){
             String firstName = rs.getString("first_name");
             String lastName = rs.getString("last_name");
@@ -56,14 +61,17 @@ public class Main {
         String password;
         String host;
         public Credentials(String fileName){
-            try {
-                Scanner input = new Scanner(new File(fileName));
-                user = input.nextLine().trim();
-                password = input.nextLine().trim();
-                host=input.nextLine().trim();
-            } catch (FileNotFoundException e) {
-                throw new RuntimeException(e);
-            }
+//            try {
+//                Scanner input = new Scanner(new File(fileName));
+//                user = input.nextLine().trim();
+//                password = input.nextLine().trim();
+//                host=input.nextLine().trim();
+//            } catch (FileNotFoundException e) {
+//                throw new RuntimeException(e);
+//            }
+              host="woz.csmp.missouriwestern.edu";
+              user="csc";
+              password="sandy2714288";
 
         }
     }
