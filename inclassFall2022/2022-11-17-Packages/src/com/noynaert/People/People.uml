@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="395.35404626224636" y="236.7847261650926">com.noynaert.People.Employee</node>
+    <node x="748.3581805607735" y="254.24485565371748">com.noynaert.People.Customer</node>
+    <node x="473.9917729489009" y="505.17212491509883">com.noynaert.People.Hourly</node>
+    <node x="100.56173474542001" y="505.25331195662284">com.noynaert.People.Salaried</node>
+    <node x="520.3129077684487" y="-120.24907565990355">com.noynaert.People.Person</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.noynaert.People.Hourly" target="com.noynaert.People.Employee" relationship="GENERALIZATION">
+      <point x="2.270510990456387E-4" y="-65.50012491509881" />
+      <point x="614.992" y="468.0" />
+      <point x="536.354" y="468.0" />
+      <point x="-4.6262246314654476E-5" y="96.50027383490743" />
+    </edge>
+    <edge source="com.noynaert.People.Employee" target="com.noynaert.People.Person" relationship="GENERALIZATION">
+      <point x="140.99995373775369" y="2.7383490743204675E-4" />
+      <point x="713.0" y="333.285" />
+      <point x="713.0" y="219.285" />
+      <point x="626.313" y="219.285" />
+      <point x="9.223155132076499E-5" y="126.50007565990356" />
+    </edge>
+    <edge source="com.noynaert.People.Customer" target="com.noynaert.People.Person" relationship="GENERALIZATION">
+      <point x="-106.00018056077352" y="1.443462825250208E-4" />
+      <point x="713.0" y="304.745" />
+      <point x="713.0" y="219.285" />
+      <point x="626.313" y="219.285" />
+      <point x="9.223155132076499E-5" y="126.50007565990356" />
+    </edge>
+    <edge source="com.noynaert.People.Salaried" target="com.noynaert.People.Employee" relationship="GENERALIZATION">
+      <point x="2.652545800003736E-4" y="-65.5003119566228" />
+      <point x="241.562" y="468.0" />
+      <point x="536.354" y="468.0" />
+      <point x="-4.6262246314654476E-5" y="96.50027383490743" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.0719794344473008" showDependencies="false" x="540.4999999999999" y="268.0" />
+  <SelectedNodes>
+    <node>com.noynaert.People.Employee</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
