@@ -63,3 +63,5 @@ Some of this material will be covered quickly.  A lot of it should still be revi
 * Dependency Injection
 * Websites and Restful APIs
 
+This document is from the 2022 offering of the course.
+
