@@ -63,6 +63,3 @@ Some of this material will be covered quickly.  A lot of it should still be revi
 * Dependency Injection
 * Websites and Restful APIs
 
-
-
-
