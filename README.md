@@ -21,13 +21,18 @@ There will be two simple assignments.  Technically the assignments will be due a
   * Reading from a file.  Handling exceptions.
   * Reading from a URL. More on exceptions.  Exceptions as a model for Inheritance
   * Consulting Java APIs
-  * Very basic Github
 * Objects
   * Creating Objects.  
   * Arrays of Objects
+* Generic Basics
   
 ### Unit 01 Data Exchange
 
+* Git
+  * Setting up git security
+    * 2FA (Two factor Authentication)
+    * SSH -- For use at the command line
+    * Tokens in IntelliJ (and maybe VS Code)
 * Jar files
 * Maven and Dependencies
   * Namespaces
