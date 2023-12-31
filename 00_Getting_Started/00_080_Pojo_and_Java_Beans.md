@@ -43,6 +43,6 @@ Serialization was a good idea.  But it had one giant flaw.  It really only worke
 
 One of the original conceits of the Java creators was that Java would replace all other languages.  It would even replace HTML.  Therefore Java programs would be calling other Java programs and passing data.
 
-What really happened was that XML and JSON became the standard methods of passing data between programs.  
+What really happened was that XML and JSON became the standard methods of passing data between programs.  Recently YAML has also become popular.
 
 Now most programs in all languages serialize data by passing JSON.  The serialization interface in Java became only a "Marker" class and has no requirements of a normal interface.
