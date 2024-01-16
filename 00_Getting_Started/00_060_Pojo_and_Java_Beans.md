@@ -2,11 +2,11 @@
 
 ## POJO -- "Plain Old Java Object"
 
-What we have been setting up are sometimes called "Plain Old Java Objects" or POJO.  
+A "Plain Old Java Object" roughly corresponds to a record in a database.  
 
 Different people define POJO a little differently.  But generally a POJO refers to a typical Java Object that includes getters, setters, and constructors.
 
-Some people say any Java Class is a POJO.  But others (including the instructor) distinguish between POJOs and other Java Object.  Some Java objects are basically housekeeping operations.  
+Some people say any Java Class is a POJO.  But others (including the instructor) distinguish between POJOs and other Java Object.  Some Java objects are basically housekeeping operations.  I regard things like Scanners to be utility methods rather than a POJO.  
 
 For this course I will use the term POJO to refer to objects that conform to the following:
 
@@ -31,7 +31,7 @@ Some operations require an object to be a Java Bean.
   * static and final
 * There are getters and setters for all fields.  (In some cases a setter may do nothing, but there still needs to be a setter)
 * There is a default or no-Arg constructor
-* Serializable.  Originally a Bean had to to implement the serializable interface.  But in recent versions of Java the serializable interface has no functionality.  Therefore many Java Beans do not implement a serializable interface.  
+* Serializable.  Originally a Bean had to to implement the serializable interface.  But in recent versions of Java the serializable interface has no functionality.  Therefore many Java Beans do not have to implement a serializable interface.  
 
 ## Serializable Interface.
 
@@ -45,4 +45,4 @@ One of the original conceits of the Java creators was that Java would replace al
 
 What really happened was that XML and JSON became the standard methods of passing data between programs.  Recently YAML has also become popular.
 
-Now most programs in all languages serialize data by passing JSON.  The serialization interface in Java became only a "Marker" class and has no requirements of a normal interface.
+Now most programs in all languages serialize data by passing JSON, YAML, or XML.  The serialization interface in Java became only a "Marker" class and has no requirements of a normal interface.
