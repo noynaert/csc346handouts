@@ -1,4 +1,4 @@
-# 00.080 POJOs and JavaBeans
+# 00.060 POJOs and JavaBeans
 
 ## POJO -- "Plain Old Java Object"
 
