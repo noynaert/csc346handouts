@@ -1,3 +1,5 @@
+## ignore intellij projects that are to be skipped
+tmp*/
 credentials.txt
 # Compiled class file
 *.class
