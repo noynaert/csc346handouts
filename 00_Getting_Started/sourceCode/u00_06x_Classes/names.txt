@@ -1,0 +1,17 @@
+Fred:29
+Wilma:30
+Barney:28
+Betty:26
+Dino:6
+Pebbles:2
+
+
+
+Mr. Slate
+Gazzo:888
+asdfli:  324234: ;sdf
+BamBam:2
+Barney:27
+Barney:999
+Barney:29
+Dino:xx
