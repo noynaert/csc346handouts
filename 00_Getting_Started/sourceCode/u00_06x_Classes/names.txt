@@ -5,7 +5,9 @@ Betty:26
 Dino:6
 Pebbles:2
 
-
+Fred:29
+Fred:29
+Fred:39
 
 Mr. Slate
 Gazzo:888
