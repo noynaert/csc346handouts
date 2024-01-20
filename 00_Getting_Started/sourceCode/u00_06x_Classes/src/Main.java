@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         ArrayList<Person> list = null;
         String fileName = "names.txt";
         list = readPeople(fileName);
