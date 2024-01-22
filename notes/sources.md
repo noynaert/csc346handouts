@@ -14,3 +14,5 @@ Restful get, post, httpResponses
 ## Five Thirty Eight
 
 [https://data.fivethirtyeight.com/](https://data.fivethirtyeight.com/)
+
+-Goodreads books sample [https://github.com/zygmuntz/goodbooks-10k/blob/master/books.csv](https://github.com/zygmuntz/goodbooks-10k/blob/master/books.csv)
