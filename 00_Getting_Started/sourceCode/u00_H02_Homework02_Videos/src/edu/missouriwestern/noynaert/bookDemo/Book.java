@@ -31,7 +31,7 @@ public class Book implements Comparable<Book>{
      * @param year as a double.  It is converted to an int
      */
     public Book(String isbn, String author, String title, double year) {
-        this(isbn,author,title,(int)year,)
+        this(isbn,author,title,(int)year);
     }
 
     public String getIsbn() {
