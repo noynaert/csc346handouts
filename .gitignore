@@ -1,5 +1,8 @@
 ## ignore intellij projects that are to be skipped
 tmp*/
+00_H02_ReadingCSV/*
+script-dir/*
+u00_H02_Homework02_Videos/*
 credentials.txt
 # Compiled class file
 *.class

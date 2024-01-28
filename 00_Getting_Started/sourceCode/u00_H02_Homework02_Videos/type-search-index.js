@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"edu.missouriwestern.noynaert.bookDemo","l":"Book"},{"p":"edu.missouriwestern.noynaert.bookDemo","l":"CompareTitle"},{"p":"edu.missouriwestern.noynaert.bookDemo","l":"CompareYear"},{"p":"<Unnamed>","l":"Main"}];updateSearchResults();

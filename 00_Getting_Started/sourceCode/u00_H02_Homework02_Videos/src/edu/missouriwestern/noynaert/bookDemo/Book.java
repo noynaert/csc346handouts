@@ -11,7 +11,7 @@ import java.util.Objects;
 public class Book implements Comparable<Book>{
     private String isbn;  //10-digit ISBN
     private String author;
-    private String title;
+    String title;
     private int year;  //original publicat year
 
     public Book(String isbn, String author, String title, int year) {
