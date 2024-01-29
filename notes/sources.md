@@ -20,3 +20,6 @@ Restful get, post, httpResponses
 ## Movie Database
 
 [https://developer.themoviedb.org/docs/getting-started](https://developer.themoviedb.org/docs/getting-started)
+
+- A Java API for TMDB [https://github.com/Omertron/api-themoviedb/](https://github.com/Omertron/api-themoviedb/)
+- Another Java API.  This one has the dependency on MavenCentral. [https://github.com/c-eg/themoviedbapi/tree/master](https://github.com/c-eg/themoviedbapi/tree/master)
