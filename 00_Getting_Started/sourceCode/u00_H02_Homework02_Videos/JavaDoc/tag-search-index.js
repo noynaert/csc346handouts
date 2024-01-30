@@ -1,1 +1,1 @@
-tagSearchIndex = [];updateSearchResults();
+tagSearchIndex = [{"l":"Fields read","h":"Main.readBooksCSV(String)","d":"Section","u":"Main.html#fields-read-heading"}];updateSearchResults();

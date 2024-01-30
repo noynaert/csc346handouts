@@ -47,7 +47,7 @@ public class Main {
      * @param fileName
      * @throws IOException
      */
-    private static void writeBooksCSV(ArrayList<Book> bookList, String fileName) throws IOException {
+    public static void writeBooksCSV(ArrayList<Book> bookList, String fileName) throws IOException {
         BufferedWriter writer = Files.newBufferedWriter(Paths.get(fileName));
         CSVFormat csvFormat = CSVFormat.DEFAULT.builder().setHeader("ISBN","Author","Title", "Year").build();
         CSVPrinter csvPrinter = new CSVPrinter(writer,csvFormat);
@@ -64,7 +64,17 @@ public class Main {
      * Read records from the specified CSV file and returns an ArrayList of records.
      * The header is recognized, but not really used.
      *
-     * There is debugging information printed to the console.
+     * <p>There is debugging information printed to the console.</p>
+     *
+     * <h3>Fields read</h3>
+     * <ul>
+     *     <li>ISBN</li>
+     *     <li>author</li>
+     *     <li>title</li>
+     *     <li>year of first publication</li>
+     * </ul>
+     *
+     *
      * @param fileName  The file to be read.  The first row should be the header.
      * @return  An ArrayList of Book records in the file
      * @throws Exception It may throw a FileNotFoundException.  It may also throw an error when it attempts to parse the double in the file.
