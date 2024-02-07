@@ -32,8 +32,9 @@ Execute the following command from within the project's root folder.
 
 ## sources
 
-I used two sources loosely.
+I used these sources loosely.
 
 - [https://maven.apache.org/guides/mini/guide-creating-archetypes.html](https://maven.apache.org/guides/mini/guide-creating-archetypes.html)
 - [https://www.baeldung.com/maven-archetype](https://www.baeldung.com/maven-archetype)
+- [https://dzone.com/articles/creating-a-maven-archetype-from-an-existing-project(https://dzone.com/articles/creating-a-maven-archetype-from-an-existing-project)]
 
