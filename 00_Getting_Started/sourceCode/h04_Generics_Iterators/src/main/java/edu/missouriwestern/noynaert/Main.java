@@ -8,7 +8,8 @@ public class Main {
             LocalDate.now(),
             LocalDate.EPOCH,
             LocalDate.of(2024, 12, 25),
-            LocalDate.of(2000, 01, 01)));
+            LocalDate.of(2024,2,14),
+            LocalDate.of(2000, 1, 1)));
     private static ArrayList<String> wordList;
 
     public static void main(String[] args) {
