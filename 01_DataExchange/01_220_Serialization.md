@@ -14,6 +14,6 @@ To "serialize" means to take a POJO or Java Bean and make it into a stream, whic
 
 ## Deserialize
 
-To "deserialize" means to convert a JSON or other searial sequence into a POJO or Java Bean
+To "deserialize" means to convert a JSON or other serial sequence into a POJO or Java Bean
 
 This is also called "parsing."
