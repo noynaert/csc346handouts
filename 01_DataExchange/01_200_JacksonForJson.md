@@ -15,7 +15,7 @@ There are several ways to read and write JSON using Java.
 
 
 ## Some references
-- [JSON formatter]
+- [JSON formatter](https://jsonformatter.org/)
 - [JSON to Pojo converter](https://www.jsonschema2pojo.org/)
 
 ### Video tutorials
