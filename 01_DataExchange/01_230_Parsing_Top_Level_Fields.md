@@ -24,9 +24,9 @@ There are several ways to do it.  The cleanest is to make a class for ObjectMapp
 
 
 public class JsonUtility {
-    private static ObjectMapper mainObjectMapper;
+    private static ObjectMapper mainObjectMapper = getMainObjectMapper();
     private static ObjectMapper getMainObjectMapper(){
-        ObjectMapper mainObjectMapper = new ObjectMapper();
+        mainObjectMapper = new ObjectMapper();
         // Add some modifiers here
         return mainObjectMapper;
     }
@@ -44,7 +44,7 @@ public class JsonUtility {
 }
 ```
 
-Here is the essense of the main() method.  To keep it simple, everything is happening in main, and the json is coming from a String literal.
+Here is the essence of the main() method.  To keep it simple, everything is happening in main, and the json is coming from a String literal.
 
 ```java
 public static void main(String[] args) {
@@ -57,7 +57,6 @@ public static void main(String[] args) {
 
        // System.out.println(multiLine);
 
-        ObjectMapper objectMapper = new ObjectMapper();
         try {
             JsonNode jsonNode = objectMapper.readTree(jsonString);
             
