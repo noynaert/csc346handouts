@@ -1,8 +1,10 @@
 # 01.230 Parsing Top Level Fields
 
+[Jackson API Documentation](https://javadoc.io/doc/com.fasterxml.jackson.core)
+
 ## Dependencies
 
-Two dependencies are needed:
+Two dependencies are needed (We will add a third one later):
 
 Both dependencies are from the com.fasterxml.jackson.core
 
@@ -10,6 +12,8 @@ Both dependencies are from the com.fasterxml.jackson.core
 - jackson-databind
 
 ## ObjectMapper
+
+[ObjectMapper API documentation](https://javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/latest/index.html)
 
 ObjectMapper is a major workhorse.
 
