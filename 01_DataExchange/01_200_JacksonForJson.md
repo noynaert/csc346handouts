@@ -19,7 +19,7 @@ There are several ways to read and write JSON using Java.
 - [JSON formatter](https://jsonformatter.org/)
 - [JSON to Pojo converter](https://www.jsonschema2pojo.org/)
 - [Annotations for special cases](https://reflectoring.io/jackson/)
-
+- [https://mkyong.com/java/jackson-2-convert-java-object-to-from-json/](https://mkyong.com/java/jackson-2-convert-java-object-to-from-json/)
 ### Video tutorials
 
 - [https://www.youtube.com/watch?v=Hv_a3ZBSO_g](https://www.youtube.com/watch?v=Hv_a3ZBSO_g)
