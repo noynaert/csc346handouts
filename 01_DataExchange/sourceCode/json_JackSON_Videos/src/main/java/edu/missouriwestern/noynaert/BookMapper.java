@@ -3,6 +3,7 @@ package edu.missouriwestern.noynaert;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import edu.missouriwestern.noynaert.book.Publisher;
 
 public class BookMapper {
     private static ObjectMapper bookMapper = getBookMapper();
@@ -19,6 +20,11 @@ public class BookMapper {
         JsonNode result;
         result = getBookMapper().readTree(jsonString);
         return result;
+    }
+    public static<T> String toJson(T t) throws JsonProcessingException {
+        String jsonString = "{}";
+        jsonString = bookMapper.writeValueAsString(t);
+        return jsonString;
     }
 
 }
