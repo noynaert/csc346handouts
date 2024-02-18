@@ -1,8 +1,11 @@
 package edu.missouriwestern.noynaert;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import edu.missouriwestern.noynaert.book.Publisher;
 
 import java.io.File;
@@ -16,6 +19,8 @@ public class BookMapper {
         }
 
         // add customization configuration to handle books.
+        bookMapper.registerModule(new JavaTimeModule());
+        bookMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS,false);
 
         return bookMapper;
     }
@@ -25,21 +30,20 @@ public class BookMapper {
         return result;
     }
     public static<T> String toJson(T t) throws JsonProcessingException {
-        String jsonString = "{}";
-        jsonString = bookMapper.writeValueAsString(t);
-        return jsonString;
+        String result = "{}";
+        result = bookMapper.writeValueAsString(t);
+        return result;
     }
     public static<T> void toJson(T t, String outputFileName) throws IOException {
-        bookMapper.writeValue(new File(outputFileName), t);
+        bookMapper.writeValue(new File(outputFileName),t);
     }
-
-    public static<T> String toJsonPretty(T t) throws JsonProcessingException {
-        String jsonString = "{}";
-        jsonString = bookMapper.writerWithDefaultPrettyPrinter().writeValueAsString(t);
-        return jsonString;
+    public static <T> String toJsonPretty(T t) throws JsonProcessingException{
+        String pretty = "{}";
+        pretty = bookMapper.writerWithDefaultPrettyPrinter().writeValueAsString(t);
+        return pretty;
     }
-    public static<T> void toJsonPretty(T t, String outputFileName) throws Exception{
-        bookMapper.writerWithDefaultPrettyPrinter().writeValue(new File(outputFileName), t);
+    public static<T> void toJsonPretty(T t, String outputFileName) throws IOException {
+        bookMapper.writerWithDefaultPrettyPrinter().writeValue(new File(outputFileName),t);
     }
 
 }
