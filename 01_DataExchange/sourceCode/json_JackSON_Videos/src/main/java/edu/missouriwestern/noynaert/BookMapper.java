@@ -5,6 +5,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.missouriwestern.noynaert.book.Publisher;
 
+import java.io.File;
+import java.io.IOException;
+
 public class BookMapper {
     private static ObjectMapper bookMapper = getBookMapper();
     private static ObjectMapper getBookMapper(){
@@ -25,6 +28,18 @@ public class BookMapper {
         String jsonString = "{}";
         jsonString = bookMapper.writeValueAsString(t);
         return jsonString;
+    }
+    public static<T> void toJson(T t, String outputFileName) throws IOException {
+        bookMapper.writeValue(new File(outputFileName), t);
+    }
+
+    public static<T> String toJsonPretty(T t) throws JsonProcessingException {
+        String jsonString = "{}";
+        jsonString = bookMapper.writerWithDefaultPrettyPrinter().writeValueAsString(t);
+        return jsonString;
+    }
+    public static<T> void toJsonPretty(T t, String outputFileName) throws Exception{
+        bookMapper.writerWithDefaultPrettyPrinter().writeValue(new File(outputFileName), t);
     }
 
 }

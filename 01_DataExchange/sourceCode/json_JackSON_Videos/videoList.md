@@ -6,3 +6,4 @@ Video|Length|Description
 01 Jackson 205 Fetching Fields|?|ObjectMapper setup and fetching individual top fields
 01 Jackson 210 toJson(T)|?|Creates a basic generic toJson Method
 01 Jackson 212 toJson(T)|?|PrettyPrints the string
+01 Jackson 214 to a file|?|Prints json to a file
