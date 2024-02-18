@@ -12,23 +12,25 @@ import java.io.File;
 import java.io.IOException;
 
 public class BookMapper {
-    private static ObjectMapper bookMapper = getBookMapper();
-    private static ObjectMapper getBookMapper(){
-        if (bookMapper == null) {
-            bookMapper = new ObjectMapper();
-        }
 
-        // add customization configuration to handle books.
-        bookMapper.registerModule(new JavaTimeModule());
-        bookMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS,false);
+      private static ObjectMapper bookMapper = getBookMapper();
+      private static ObjectMapper getBookMapper() {
+          if (bookMapper == null) {
+              bookMapper = new ObjectMapper();
+          }
 
-        return bookMapper;
-    }
-    public static JsonNode parse(String jsonString) throws JsonProcessingException {
-        JsonNode result;
-        result = getBookMapper().readTree(jsonString);
-        return result;
-    }
+          // configure and customize to handle Book objects
+
+          return bookMapper;
+      }
+
+      public static JsonNode parse(String jsonString) throws JsonProcessingException {
+          JsonNode result;
+          result = bookMapper.readTree(jsonString);
+
+          return result;
+
+      }
     public static<T> String toJson(T t) throws JsonProcessingException {
         String result = "{}";
         result = bookMapper.writeValueAsString(t);
