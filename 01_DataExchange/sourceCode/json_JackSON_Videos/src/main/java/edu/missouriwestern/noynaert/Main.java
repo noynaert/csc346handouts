@@ -45,7 +45,7 @@ public class Main {
             demoFetchFields(jsonString);
 
             //Serialization (toJson)
-         //   demoToJson();
+            demoToJson();
 
         } catch (Exception e) {
             e.printStackTrace();

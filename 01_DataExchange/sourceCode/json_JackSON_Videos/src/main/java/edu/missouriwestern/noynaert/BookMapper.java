@@ -20,6 +20,8 @@ public class BookMapper {
           }
 
           // configure and customize to handle Book objects
+          bookMapper.registerModule(new JavaTimeModule());
+          bookMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS,false);
 
           return bookMapper;
       }
