@@ -46,6 +46,9 @@ public class Main {
 
             //Serialization (toJson)
             demoToJson();
+            
+            //Deserializing (fromJson)
+            demoFromJson();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -56,6 +59,21 @@ public class Main {
         }
         System.out.println(" \uD83D\uDD6E Done! \uD83D\uDD6E");
     }
+
+    private static void demoFromJson() throws Exception {
+        String jsonString = readJsonString("data/publisher.json");
+        System.out.println("The json string is " + jsonString);
+
+        //Deserialize a well-behaved Publisher
+        Publisher publisher = BookMapper.fromJson(jsonString, Publisher.class);
+        System.out.println("Deserialized Publisher: " + publisher);
+
+        //Deserialize a misBehaving Publisher
+        jsonString = readJsonString("data/publisherBad.json");
+        publisher = BookMapper.fromJson(jsonString, Publisher.class);
+        System.out.println("Deserialized Misbehaving Publisher: " + publisher);
+    }
+
 
     private static void demoToJson() throws Exception {
         //set up the object

@@ -1,10 +1,7 @@
 package edu.missouriwestern.noynaert;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import edu.missouriwestern.noynaert.book.Publisher;
 
@@ -22,6 +19,10 @@ public class BookMapper {
           // configure and customize to handle Book objects
           bookMapper.registerModule(new JavaTimeModule());
           bookMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS,false);
+
+          // configure to handle missing fields
+          bookMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false);
+
 
           return bookMapper;
       }
@@ -48,6 +49,10 @@ public class BookMapper {
     }
     public static<T> void toJsonPretty(T t, String outputFileName) throws IOException {
         bookMapper.writerWithDefaultPrettyPrinter().writeValue(new File(outputFileName),t);
+    }
+    public static<T> T fromJson(String jsonString, Class<T> className) throws JsonProcessingException {
+          JsonNode jsonNode = bookMapper.readTree(jsonString);
+          return bookMapper.treeToValue(jsonNode,className);
     }
 
 }
