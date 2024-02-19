@@ -39,3 +39,11 @@ Restful get, post, httpResponses
 ## Lots of free API without keys
 
 [https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/)
+
+- Meta data on websites [https://list.ly/api/v4/meta?url=http://www.missouriwestern.edu](https://list.ly/api/v4/meta?url=http://www.missouriwestern.edu)
+- Next MCU reliease [https://www.whenisthenextmcufilm.com/api](https://www.whenisthenextmcufilm.com/api)
+- TV shows.  Has arrays of strings.  The whole site is an array [https://api.tvmaze.com/search/shows?q=golden%20girls](https://api.tvmaze.com/search/shows?q=golden%20girls)
+- Current bitcoin price.  Nesting.  [https://api.coindesk.com/v1/bpi/currentprice.json](https://api.coindesk.com/v1/bpi/currentprice.json)
+- Super simple.  One field.  It does yaml as well.
+  - [https://api.ipify.org/?format=yaml](https://api.ipify.org/?format=yaml)
+  - [https://api.ipify.org/?format=json](https://api.ipify.org/?format=json)
