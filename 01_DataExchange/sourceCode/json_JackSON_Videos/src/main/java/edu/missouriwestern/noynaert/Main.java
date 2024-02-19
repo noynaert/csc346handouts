@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Scanner;
 import edu.missouriwestern.noynaert.book.*;
 
@@ -49,6 +50,9 @@ public class Main {
             
             //Deserializing (fromJson)
             demoFromJson();
+            
+            //Deserialize an array of records
+            demoFromJsonArray();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -58,6 +62,15 @@ public class Main {
             System.out.println("Almost Done");
         }
         System.out.println(" \uD83D\uDD6E Done! \uD83D\uDD6E");
+    }
+
+    private static void demoFromJsonArray() throws Exception{
+        String jsonString = readJsonString("data/publishers.json");
+
+        Publisher[] publishers = BookMapper.fromJson(jsonString, Publisher[].class);
+        for(Publisher publisher:publishers){
+            System.out.println("--- " + publisher);
+        }
     }
 
     private static void demoFromJson() throws Exception {

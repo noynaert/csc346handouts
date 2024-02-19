@@ -9,4 +9,5 @@ Video|Length|Description
 01 Jackson 214 to a file|6:46|Prints json to a file
 01 Jackson 220 LocalDate|8:06|Configures the Mapper to handle LocalDate objects
 01 Jackson 230 fromJson|17:10|Converts from JSON to POJO, including missing fields
-01 Jackson 323 annotations|11:20|Using @JsonAlias annotation to give alternate names
+01 Jackson 332 annotations|11:20|Using @JsonAlias annotation to give alternate names
+01 Jackson 340 arrays|5:43|Reading an array of Json objects
