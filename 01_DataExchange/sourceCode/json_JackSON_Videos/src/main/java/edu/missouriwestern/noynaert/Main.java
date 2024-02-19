@@ -72,6 +72,11 @@ public class Main {
         jsonString = readJsonString("data/publisherBad.json");
         publisher = BookMapper.fromJson(jsonString, Publisher.class);
         System.out.println("Deserialized Misbehaving Publisher: " + publisher);
+
+        //Deserialize a Book
+        jsonString = readJsonString("data/book.json");
+        Book book = BookMapper.fromJson(jsonString, Book.class);
+        System.out.println("Deserialized Book: " + book);
     }
 
 

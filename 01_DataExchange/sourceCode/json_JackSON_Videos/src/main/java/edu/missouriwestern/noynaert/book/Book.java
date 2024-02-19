@@ -1,5 +1,7 @@
 package edu.missouriwestern.noynaert.book;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+
 import java.time.LocalDate;
 import java.util.Arrays;
 
@@ -9,7 +11,9 @@ public class Book {
     private String isbn;
     private int pages;
     private LocalDate publication;
+    @JsonAlias({"publishing house", "Publishing House"})
     private Publisher publisher;
+    @JsonAlias({"main characters"})
     private String[] characters;
     private String libraryOfCongress;
 

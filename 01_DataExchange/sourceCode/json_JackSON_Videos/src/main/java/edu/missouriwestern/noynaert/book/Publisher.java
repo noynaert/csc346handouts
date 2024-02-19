@@ -1,7 +1,12 @@
 package edu.missouriwestern.noynaert.book;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+
 public class Publisher {
+    @JsonAlias({"publishing house", "publisher"})
     private String name;
+
+    @JsonAlias({"city"})
     private String location;
 
     public Publisher(String name, String location){
