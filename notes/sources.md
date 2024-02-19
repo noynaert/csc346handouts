@@ -35,3 +35,7 @@ Restful get, post, httpResponses
 * [https://api.nasa.gov/](https://api.nasa.gov/)
 * [Asteroid API](https://data.nasa.gov/Space-Science/Asteroids-NeoWs-API/73uw-d9i8/about_data)
 * [Source of this API](https://www.twilio.com/en-us/blog/java-json-with-jackson)
+
+## Lots of free API without keys
+
+[https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/)
