@@ -19,9 +19,9 @@ public class BookMapper {
           // configure and customize to handle Book objects
           bookMapper.registerModule(new JavaTimeModule());
           bookMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS,false);
-
+          bookMapper.configure(DeserializationFeature.
           // configure to handle missing fields
-          bookMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false);
+          bookMapper.configure(DeserializationFeature.Fail);
 
 
           return bookMapper;

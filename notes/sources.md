@@ -47,3 +47,5 @@ Restful get, post, httpResponses
 - Super simple.  One field.  It does yaml as well.
   - [https://api.ipify.org/?format=yaml](https://api.ipify.org/?format=yaml)
   - [https://api.ipify.org/?format=json](https://api.ipify.org/?format=json)
+  - Maps in exchange rates [https://open.er-api.com/v6/latest/USD](https://open.er-api.com/v6/latest/USD)
+  - Game of Thrones quotes with Map [https://api.gameofthronesquotes.xyz/v1/random](https://api.gameofthronesquotes.xyz/v1/random)
