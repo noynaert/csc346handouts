@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" minHeight="600.0" minWidth="800.0" prefHeight="676.0" prefWidth="967.0" spacing="20.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.missouriwestern.noynaert.javafx_image.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Button onAction="#onHelloButtonClick" text="Click to change images" />
+   <Label fx:id="title" text="Odysseus and The Dish">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Label fx:id="copyright" text="John Sarkissian (ATNF Parkes Radio Observatory)" />
+   <ImageView fx:id="pretty" fitHeight="310.0" fitWidth="547.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../../images/The_Dish_Tracking_IM-1_22February2024_04.jpg" />
+      </image>
+   </ImageView>
+   <TextArea fx:id="explanation" prefHeight="145.0" prefWidth="760.0" text="Murriyang, the CSIRO’s Parkes Radio Telescope, points toward a nearly Full Moon in this image from New South Wales, Australia, planet Earth. Bathed in moonlight, the 64 meter dish is receiving weak radio signals from Odysseus, following the robotic lander's February 22 touch down some 300 kilometers north of the Moon's south pole. The landing of Odysseus represents the first U.S. landing on the Moon since the Apollo 17 mission in 1972. Odysseus' tilted orientation on the lunar surface prevents its high-gain antenna from pointing toward Earth. But the sensitivity of the large, steerable Parkes dish significantly improved the reception of data from the experiments delivered to the lunar surface by the robotic moon lander. Of course the Parkes Radio Telescope dish became famous for its superior lunar television reception during the Apollo 11 mission in 1969, allowing denizens of planet Earth to watch the first moonwalk." wrapText="true" />
+</VBox>
