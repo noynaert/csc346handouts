@@ -40,7 +40,7 @@
 	- Include a toString() method that uses String.format.
 	- Generate the equals() and hashCode() methods based on the last name and first name matching.  Ignore the other fields.
 	- Include JavaDoc comments for the class and at least one method
-- Connect tot he misc database on woz.csmp.missouriwestern.edu (10 points)
+- Connect to the misc database on woz.csmp.missouriwestern.edu (10 points)
 	- Use the fakePeople table.  Select all of the records that have the last_name like 'Kays%'
 	- Store the names returned by the selection in an ArrayList of the bean you created in the previous task.  You will not be able to get the latitude and longitude from the fake people database.
 	- Sort the ArrayList into order using the built-in Collections.sort() method.  Print this list to the console.  (The latitude and longitude will be 0 at this point.)
@@ -84,5 +84,10 @@ As an upper level course, an A in CSC 346 should indicate an ability to go beyon
 We have only been using Jackson to process JSON data.  However, it can also process XML and YAML formats.  Pick one of the sites below and process it in its XML or YAML form.  You may do these as maps or you may create objects.
 
 - [https://api.worldbank.org/v2/region?format=xml](https://api.worldbank.org/v2/region?format=xml)
+	- Process the file as an XML file using Jackson
 	- There is a list of countries.  Each country has a standard 3-letter abbreviation, a standard 2-letter abbreviation, and the name of the country.   Your program should put the list into an array list.  Sort the list by the 2-letter abbreviation.  
-	- Print the list to the console, showing it sorted by 2-letter code
+	- Print the list to the console, showing it sorted by 2-letter code.
+- [https://raw.githubusercontent.com/noynaert/csc346handouts/main/notes/midtermSpr2024/bitcoin.yaml](https://raw.githubusercontent.com/noynaert/csc346handouts/main/notes/midtermSpr2024/bitcoin.yaml)
+  - Note that this is a static file.  You may wish to copy it as a local file, rather than using it from github.
+  - Process the file as a YAML file using Jackson
+  - Print out the Bitcoin exchange rate in USD and in Euro.  Use the rate_float.
