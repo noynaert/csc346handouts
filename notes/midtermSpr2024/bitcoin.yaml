@@ -1,0 +1,27 @@
+---
+time:
+  updated: Mar 6, 2024 10:43:21 UTC
+  updatedISO: '2024-03-06T10:43:21+00:00'
+  updateduk: Mar 6, 2024 at 10:43 GMT
+disclaimer: This data was produced from the CoinDesk Bitcoin Price Index (USD). Non-USD
+  currency data converted using hourly conversion rate from openexchangerates.org
+chartName: Bitcoin
+bpi:
+  USD:
+    code: USD
+    symbol: "&#36;"
+    rate: '66,737.641'
+    description: United States Dollar
+    rate_float: 66737.6408
+  GBP:
+    code: GBP
+    symbol: "&pound;"
+    rate: '52,422.55'
+    description: British Pound Sterling
+    rate_float: 52422.5504
+  EUR:
+    code: EUR
+    symbol: "&euro;"
+    rate: '61,358.52'
+    description: Euro
+    rate_float: 61358.5203

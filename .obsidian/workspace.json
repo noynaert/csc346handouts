@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_Getting_Started/00_010_Intro.md",
-                "mode": "source",
+                "file": "notes/midtermSpr2024/bitcoin.yaml.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_Getting_Started/00_010_Intro.md",
+                "file": "notes/midtermSpr2024/bitcoin.yaml.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00_Getting_Started/00_010_Intro.md",
+                "file": "notes/midtermSpr2024/bitcoin.yaml.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_Getting_Started/00_010_Intro.md"
+                "file": "notes/midtermSpr2024/bitcoin.yaml.md"
               }
             }
           }
@@ -148,7 +148,10 @@
   },
   "active": "4c6da8243d4d9eca",
   "lastOpenFiles": [
-    "00_Getting_Started/00_020_IDE.md",
-    "00_Getting_Started/00_010_Intro.md"
+    "notes/midtermSpr2024/midtermSpr2024.md",
+    "notes/midtermSpr2024/bitcoin.yaml.md",
+    "notes/midtermSpr2024",
+    "00_Getting_Started/00_010_Intro.md",
+    "00_Getting_Started/00_020_IDE.md"
   ]
 }
