@@ -1,7 +1,5 @@
 # 02.200 Internet and the HTTP Protocol
 
-[https://www.baeldung.com/java-9-http-client](https://www.baeldung.com/java-9-http-client)
-
 ## The Internet
 
 The modern internet operates on a Five Layer Model.  The classic version is the TCP/IP stack in the following image.
