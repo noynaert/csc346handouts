@@ -47,6 +47,7 @@ public class Location {
 
             // configure to handle missing fields
             locationMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false);
+            locationMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS,false)
         }
         return locationMapper;
     }
