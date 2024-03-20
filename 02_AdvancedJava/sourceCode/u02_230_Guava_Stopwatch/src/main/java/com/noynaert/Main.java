@@ -1,8 +1,3 @@
-# 02.230 Guava Stopwatch
-
-Note that the following code measures the time it took to do the call to the method.  It does not count the amount of time it took to count to 10,000,000.
-
-```java
 package com.noynaert;
 
 import com.google.common.base.Stopwatch;
@@ -29,4 +24,3 @@ public class Main {
         return sum;
     }
 }
-```
