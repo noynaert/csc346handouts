@@ -9,7 +9,7 @@ Java has two primary methods for implementing threads.
 
 In most cases, the Runnable method is the better choice
 
-- Implementing Thread makes it impossible to use inheritance for the class.  It effectively makes the class a final class that cannot be extended.
+- Extending Thread makes it impossible to use inheritance for the class.  It effectively makes the class a final class that cannot be extended.
 - Design principles would say that a Class should have a purpose.  Extending Thread suggests that the class's primary purpose is to be a thread.
 - There are technical limits on the extent of the multithreading
 
