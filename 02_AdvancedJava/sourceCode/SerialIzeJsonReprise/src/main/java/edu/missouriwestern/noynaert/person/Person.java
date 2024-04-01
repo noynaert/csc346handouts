@@ -37,6 +37,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Person implements Serializable, Comparable<Person> {
     private String name;
     private int age;
+    private FavoriteQuote quote;
 
     // Serialization code
     private static ObjectMapper personMapper = getPersonMapper();
@@ -64,6 +65,7 @@ public class Person implements Serializable, Comparable<Person> {
     public Person(){
         setName("Unknown");
         setAge(999);
+        quote = new FavoriteQuote();
     }
     public String getName() {
         return name;
@@ -83,10 +85,10 @@ public class Person implements Serializable, Comparable<Person> {
 
     @Override
     public String toString() {
-        return "Person(from toString){" +
+        return "Person(from toString) " +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                '}';
+                ", Quote" + quote;
     }
 
     @Override
@@ -96,5 +98,5 @@ public class Person implements Serializable, Comparable<Person> {
         result = (result==0) ? (age-o.age) : result;
         return result;
     }
-
+    //public abstract String getIdNumber();
 }

@@ -16,14 +16,25 @@ public class Main {
         fred.setName("Fred");
         fred.setAge(29);
 
+
         System.out.println(fred);
+        Person mystery = new Person();
+        System.out.println(mystery);
+        String spouseString = """
+                { "name":"Wilma" , "age":30}
+                """;
 
         try {
             String jsonString = fred.toJson();
             System.out.println("The json is \n" + jsonString);
+            System.out.println(mystery.toJson());
 
-            Person clone = Person.fromJson(jsonString);
-            System.out.println("The clone is: \n"+ clone);
+            Person spouse = Person.fromJson(spouseString);
+            System.out.println("Spouse is " + spouse);
+
+//
+//            Person clone = Person.fromJson(jsonString);
+//            System.out.println("The clone is: \n"+ clone);
 
             // Now with an ArrayList
             System.out.println("-=-=-=-=-=-ArrayList=-=-=-=-=-=-=-");
