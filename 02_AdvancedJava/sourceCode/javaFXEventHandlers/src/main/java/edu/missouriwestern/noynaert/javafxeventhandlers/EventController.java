@@ -1,20 +1,40 @@
 package edu.missouriwestern.noynaert.javafxeventhandlers;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
+import java.util.*;
+
 public class EventController {
-//    @FXML
-//    private Label welcomeText;
-//
-//    @FXML
-//    protected void onHelloButtonClick() {
-//        welcomeText.setText("Welcome to JavaFX Application!");
-//    }
+    private Map<String,String> customMap = createCustomColors();
+    private Map<String,String> createCustomColors(){
+        Map<String,String> map = new Hashtable<>();
+
+        map.put("Dollar","#85BB65");
+        map.put("Bob", "#abcdef");
+        map.put("Banana", "#ffe135");
+
+        return map;
+    }
+
+    @FXML
+    private ChoiceBox choiceBox = makeChoiceBox();
+
+    private ChoiceBox makeChoiceBox(){
+        ChoiceBox cb = new ChoiceBox();
+//        ObservableList<String> colorList = FXCollections.observableArrayList(customMap.keySet());
+//        cb.setItems(colorList);
+        cb.getItems().addAll("item1", "item2", "item3");
+        System.out.println("In makeChoiceBox");
+        return cb;
+    }
 
     @FXML
     private Circle mwsuCircle;
