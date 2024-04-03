@@ -34,12 +34,13 @@ public class ChoiceBoxController  {
     @FXML
     private void colorChoiceBoxChanged(ActionEvent event){
         String choice = colorChoiceBox.getValue();
-        System.out.println("The selected color is " + choice);
         String hexColor = colorMap.get(choice);
+        System.out.println(choice + " (" + hexColor+")");
+
         System.out.println("The hex code is " + hexColor);
         Color color = Color.web(hexColor);
         colorCircle.setFill(color);
-        colorLabel.setText("Selected color: " + choice);
+        colorLabel.setText(choice + " ("+hexColor+")");
         colorLabel.setVisible(true);
 
     }
