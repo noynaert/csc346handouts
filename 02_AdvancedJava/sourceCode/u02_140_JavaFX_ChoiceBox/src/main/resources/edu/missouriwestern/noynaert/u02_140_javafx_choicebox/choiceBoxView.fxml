@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
@@ -29,5 +30,6 @@
       </Label>
       <Circle fx:id="colorCircle" fill="DODGERBLUE" layoutX="281.0" layoutY="273.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
       <ChoiceBox fx:id="colorChoiceBox" layoutX="173.0" layoutY="128.0" prefHeight="24.0" prefWidth="183.0" />
+      <ComboBox fx:id="dummyCombo" layoutX="28.0" layoutY="234.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
