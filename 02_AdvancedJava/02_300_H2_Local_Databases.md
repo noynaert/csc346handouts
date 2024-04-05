@@ -43,3 +43,7 @@ Sometimes it is necessary to load some standardized set of baseline data, then a
 A local database cannot share data with other users. 
 
 Sometimes we need to collect data to a central server.
+
+## Prototyping and Proof-of-Concept
+
+Sometimes it is useful to just use an internal database when you are starting up a new project.  
