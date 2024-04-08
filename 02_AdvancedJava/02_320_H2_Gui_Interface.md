@@ -5,7 +5,7 @@ Code used in demos:
 ## Delete a table (to start over)
 
 ```sql
-DROP TABLE people;
+DROP TABLE IF EXISTS people;
 ```
 
 ## Create a table
