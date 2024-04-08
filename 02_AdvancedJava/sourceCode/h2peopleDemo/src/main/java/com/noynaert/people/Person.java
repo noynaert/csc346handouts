@@ -35,7 +35,7 @@ public class Person implements Comparable<Person> {
     }
     @Override
     public String toString(){
-        return String.format("%s, 3.1 cm", name, height);
+        return String.format("%s, %3.1f cm", name, height);
     }
 
     @Override
