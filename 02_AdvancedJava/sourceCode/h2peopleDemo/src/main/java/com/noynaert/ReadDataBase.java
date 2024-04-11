@@ -7,7 +7,7 @@ public class ReadDataBase {
 
         ArrayList list;
         H2personDB personDB = new H2personDB();
-        String sqlString = "SELECT name, height FROM people WHERE name LIKE 'Zora%' ORDER BY height";
+        String sqlString = "SELECT name, height FROM people ORDER BY height";
         list = personDB.getList(sqlString);
         printList(list);
 
