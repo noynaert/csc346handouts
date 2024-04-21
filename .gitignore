@@ -7,6 +7,10 @@ credentials.txt
 # Compiled class file
 *.class
 
+# h2 database
+*.trace.db
+*.mv.db
+
 # Log file
 *.log
 
