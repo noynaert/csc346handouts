@@ -10,6 +10,8 @@ credentials.txt
 # h2 database
 *.trace.db
 *.mv.db
+personDB.mv.db
+personDB.*.db
 
 # Log file
 *.log
@@ -134,3 +136,4 @@ target
 target/*
 
 !.gitignore
+02_AdvancedJava/sourceCode/h2peopleDemo/personDB.mv.db
