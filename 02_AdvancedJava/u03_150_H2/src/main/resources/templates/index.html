@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <title>Basic Page</title>
 </head>
 <body>
-$END$
+<h1>I am Root!</h1>
+<p>Today is <spam th:text="${today}"</p>
+<p>The month is <span th:text="${month}"</p>
+
+<footer>
+    <img src="logo.png" alt="MWSU Logo"/>
+</footer>
 </body>
 </html>
