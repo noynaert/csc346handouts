@@ -6,7 +6,7 @@ Reference for exceptions: [https://rollbar.com/blog/java-exceptions-hierarchy-ex
 
 ### Throwables
 
-Java has a "Throwable" class.  There are two sub-classes: Errors nd Exceptions
+Java has a "Throwable" class.  There are two sub-classes: `Errors` and `Exceptions`.
 
 #### Errors
 
@@ -31,8 +31,6 @@ The main() method is the top method.  VS Code adds "throws exception" to the mai
 ## Reading from a file
 
 First, there is the question of where to put the file to be read.  It needs to be placed in the "root" of the project folder.  
-
-My trick in VS Code is to click on the `README.md` file and then create a new file there.
 
 ```java
 import java.io.File;
