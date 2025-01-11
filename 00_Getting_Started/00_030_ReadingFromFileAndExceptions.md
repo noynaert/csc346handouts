@@ -1,18 +1,16 @@
 # 00.030 Reading from a file and Exceptions
 
-## Exceptions
-
-Reference for exceptions: [https://rollbar.com/blog/java-exceptions-hierarchy-explained/](https://rollbar.com/blog/java-exceptions-hierarchy-explained/)
-
-### Throwables
+## Throwables
 
 Java has a "Throwable" class.  There are two sub-classes: `Errors` and `Exceptions`.
 
-#### Errors
+[https://rollbar.com/blog/java-exceptions-hierarchy-explained/](https://rollbar.com/blog/java-exceptions-hierarchy-explained/)
+
+## Errors
 
 Errors are serious problem that probably cannot be recovered from.  These include things like running out of memory or an error in configuration.
 
-#### Exceptions
+## Exceptions
 
 Exceptions are problems that are serious but the program may be able to continue.
 

@@ -2,7 +2,7 @@
 
 I am assuming that everyone has a basic understanding of Objects and classes.
 
-Some people may need a review.  Also, four different people have taught CSC in the last 5 years.  We also went through a major course realignment.  We also have people who transferred in their basic Java.  
+Some people may need a review.  We also went through a major course realignment.  We also have people who transferred in their basic Java.  
 
 The intent of this unit is to get everyone oriented to the Java standard practices for Class definitions.
 
