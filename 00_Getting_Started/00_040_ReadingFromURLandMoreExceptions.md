@@ -31,7 +31,7 @@ Also, note that the second catch uses the `getMessage()` method of the Exception
         }
 ```
 
-### Single generic catch claus
+### Single generic catch clause
 
 It is also possible to handle more than one type of exception with a single `catch()`.
 
