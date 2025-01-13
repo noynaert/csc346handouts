@@ -16,7 +16,7 @@ Most variable names should be meaningful.
 
 * Do not abbreviate.
   * If you abbreviate sometimes, you have to remember whether you abbreviated.  Then you have to remember how you abbreviated.  Avoid the problem.  Don't abbreviate.
-  * Use conventional single-letter variable names.  Don't use them for other purposes
+* Use conventional single-letter variable names.  Don't use them for other purposes
     * i, j, and k should be used for indexes in loops
     * n should represent the number of items on a list or the number of active items in an array.
     * e for exception in catch() clause
@@ -29,3 +29,11 @@ Most variable names should be meaningful.
   * Should include @author
   * Should include @since
 * Javadoc comments should be in front of all non-standard methods.  They are not required in front of getters, setters, constructor, or toString methods unless those methods do something in a non-standard way.
+
+## Capitalization
+
+The first letter of all class names ***Must*** be capitalized.  The reason is that it should be able to tell at a glance that an identifier is a Class.
+
+Constants should be ALLCAPS
+
+Everything else should be lower case.
