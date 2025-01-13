@@ -10,6 +10,15 @@ This review will also cover implementation of the Comparable&lt;Object> Interfac
 
 ## Standard class components
 
+* Each public class in a file
+* JavaDoc comment(s)
+* Setters
+* Getters
+* Constructor(s)
+* toString()
+* compareTo()
+* equals() and hashCode() written by the IDE
+
 * Javadoc comments before the class should include a description of the class and `@author` and `@since` clauses.  The @since should show the month and year the class was started.  The standard class members do not need their own JavaDoc comments, but methods that do not follow the normal pattern should have their own JavaDoc.
 * Data members are private
 * Constructors should either call other constructors or setters to assign initial values to data fields
