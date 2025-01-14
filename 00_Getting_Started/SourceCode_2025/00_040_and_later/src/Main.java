@@ -19,6 +19,19 @@ public class Main {
     public static void main(String[] args) {
         final String ADDRESS = "https://raw.githubusercontent.com/noynaert/csc346handouts/refs/heads/main/dataFiles/sanderson.md";
         ArrayList<String> lines = new ArrayList<>();
+        ArrayList<Book> books = new ArrayList<>();
+
+        //temporary testing
+        Book b = new Book();
+        books.add(b);
+        Book way = new Book("The Way of Kings", 1258);
+        books.add(way);
+        books.add(new Book("Oathbringer", 1243));
+        books.add(new Book("Edgedancer",272));
+        System.out.println(books);
+        printList(books,"Books");
+
+
 
         readURL(ADDRESS, lines);
         printList(lines, "Stormlight Archive Novels");
@@ -64,7 +77,7 @@ public class Main {
      * @param title:String  The title to be printed labove the data
      */
 
-    private static void printList(ArrayList<String> lines, String title) {
+    private static <T>void printList(ArrayList<T> lines, String title) {
         //Print the title
         System.out.printf("\n%s\n\n",title);
 
