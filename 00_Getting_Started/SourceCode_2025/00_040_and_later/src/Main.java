@@ -49,11 +49,9 @@ public class Main {
             }
             input.close();
             inStream.close();
-        } catch (MalformedURLException e) {
-            System.out.printf("Error reading URL (malformed URL): %s\n", address);
-            //System.exit(1);
-        } catch (IOException e) {
-            System.out.printf("Error reading URL (IOException): %s\n", address);
+        } catch (Exception e) {
+            System.out.printf("Error reading URL (%s): %s\n", e.getMessage(),address);
+            System.exit(1);
         }
 
     }
