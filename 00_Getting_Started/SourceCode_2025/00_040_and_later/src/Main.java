@@ -19,24 +19,42 @@ public class Main {
     public static void main(String[] args) {
         final String ADDRESS = "https://raw.githubusercontent.com/noynaert/csc346handouts/refs/heads/main/dataFiles/sanderson.md";
         ArrayList<String> lines = new ArrayList<>();
-        ArrayList<Book> books = new ArrayList<>();
-
-        //temporary testing
-        Book b = new Book();
-        books.add(b);
-        Book way = new Book("The Way of Kings", 1258);
-        books.add(way);
-        books.add(new Book("Oathbringer", 1243));
-        books.add(new Book("Edgedancer",272));
-        System.out.println(books);
-        printList(books,"Books");
-
-
+        ArrayList<Book> books;
 
         readURL(ADDRESS, lines);
         printList(lines, "Stormlight Archive Novels");
 
+        books = makeBooks(lines);
+        printList(books, "Stormlight Archive Books");
+
+
         System.out.println ("Done!");
+    }
+
+    private static ArrayList<Book> makeBooks(ArrayList<String> lines) {
+        ArrayList<Book> books = new ArrayList<>();
+
+        for(var line :lines){
+            String[] parts = line.split("\\|");
+            if(parts.length == 2){
+                String title = parts[0];
+                int pages = -99;
+                //System.out.println(parts[1]);
+                try{
+                    pages = Integer.parseInt(parts[1]);
+                }catch(NumberFormatException e){
+                    System.out.printf("I caught %s\n", parts[1]);
+                    //continue;  //aborts the rest of the loop if the line is Not a Number
+                }
+                if (pages != -99) {
+                   // Book book = new Book(title, pages);
+                   // books.add(book);
+                    books.add(new Book(title, pages));
+                }
+            }
+        }
+
+        return books;
     }
 
     /**

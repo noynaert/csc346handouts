@@ -16,6 +16,7 @@ This review will also cover implementation of the Comparable&lt;Object> Interfac
 * Getters
 * Constructor(s)
 * toString()
+  * toString should not include a \n 
 * compareTo()
 * equals() and hashCode() written by the IDE
 
