@@ -33,3 +33,9 @@ In this course you have two options for naming packages.  You may use either mis
   - edu.missouriwestern.jfuller6
 - If you own your own domain, you may set up your own system.
   - com.noynaert.csc346
+
+## Organization of Projects
+
+Let's say we have a project called `edu.missouriwestern.mgriffon.something`.
+
+Each part of the name between periods would be a folder or directory.  Creating a project also creates a directory structure.  If more packages are loaded from the same organization, they will all be in the same directory structure.
