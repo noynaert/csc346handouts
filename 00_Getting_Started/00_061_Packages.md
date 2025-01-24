@@ -4,14 +4,10 @@
 
 It doesn't seem like "naming things" should be hard.  But it is.  The problem is creating names that are unique.  Package creators should not have to worry about "stepping on" or reusing a name used by another developer.
 
-### Variations on "Two Hard Things."
+### Variation on "Two Hard Things."
 
 - There are 2 hard problems in computer science: cache invalidation, naming things, and off-by-1 errors.
-- There are only two hard problems in distributed systems: 
-  - 2. Exactly-once delivery 
-  - 1. Guaranteed order of messages 
-  - 2. Exactly-once delivery
-
+  
 ## The Domain Name System
 
 Java resolved the namespace problem by using the Internet's Domain Name System (DNS).  Domain names must be unique.  There is a worldwide system that is committed to making sure that domain names are unique.
