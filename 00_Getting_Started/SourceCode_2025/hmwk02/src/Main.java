@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 import edu.missouriwestern.noynaert.publications.Book;
 import edu.missouriwestern.noynaert.publications.PageComparator;
@@ -14,6 +15,7 @@ public class Main {
 
         ArrayList<Book> books = makeBooks(lines);
         Collections.sort(books, new PageComparator().reversed());
+        Collections.sort(books, new BookTitleLengthComparator().reversed());
         Toolkit.printList(books,"Stormlight Archive Books");
 
         System.out.println("Done");
@@ -43,5 +45,22 @@ public class Main {
         }
 
         return books;
+    }
+}
+class BookTitleLengthComparator implements Comparator<Book> {
+
+    @Override
+    public int compare(Book a, Book b) {
+        int result = 0;
+        result = a.getTitle().length() - b.getTitle().length();
+        if (result == 0) {
+            a.getTitle().compareTo(b.getTitle());
+        }
+        return result;
+    }
+
+    @Override
+    public Comparator<Book> reversed() {
+        return Comparator.super.reversed();
     }
 }
