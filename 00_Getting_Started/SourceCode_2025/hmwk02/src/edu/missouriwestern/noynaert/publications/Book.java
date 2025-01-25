@@ -1,6 +1,5 @@
 package edu.missouriwestern.noynaert.publications;
 
-import java.io.Serializable;
 import java.util.Objects;
 
 /**

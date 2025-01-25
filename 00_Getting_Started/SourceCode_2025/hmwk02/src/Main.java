@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 import edu.missouriwestern.noynaert.publications.Book;
+import edu.missouriwestern.noynaert.publications.PageComparator;
 import edu.missouriwestern.noynaert.utility.Toolkit;
 
 public class Main {
@@ -11,6 +13,7 @@ public class Main {
         Toolkit.printList(lines,"Input lines");
 
         ArrayList<Book> books = makeBooks(lines);
+        Collections.sort(books, new PageComparator().reversed());
         Toolkit.printList(books,"Stormlight Archive Books");
 
         System.out.println("Done");
