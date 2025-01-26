@@ -18,5 +18,11 @@ Github Page | Videos (run time)
 &nbsp;|[00.080 Creating a JavaDoc](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7191aef1-4544-4968-963d-b26700460dd9) (4:19)
 
 
+## Homework 02 related videos
 
+Github<br>Page|Video|Runtime|Comment
+:---|:---|:---:|:---
+[00.095 Comparator](https://github.com/noynaert/csc346handouts/blob/main/00_Getting_Started/00_095_Comparator.md)|[00.095 Comparator Part 01](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bb5e523d-5eef-4afc-8711-b27000e0f006)<br>[00.095 Comparator Part 02](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c644b29a-a27c-4da1-9d1a-b27000e10633)|10:48<br>3:57|&nbsp;
+--|[00.110 Inheritance](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6c005e27-eedd-4d8c-bbfb-b27100acc52e)|24:54|This should be review for most people, it is optional
+[Scratchpad Source Code](https://github.com/noynaert/csc346handouts/blob/main/00_Getting_Started/SourceCode_2025/hmwk02/src/Scratchpad.java)|[00.150 Markdown Part 01](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=94671e7b-82c6-4ef5-a4c8-b27100acc4ca)<br>[00.150 Markdown Part 02](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6c08ba96-098e-47d3-871b-b27100acc4f8)<br>[00.150 Markdown Part 03](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6c08ba96-098e-47d3-871b-b27100acc4f8)<br>[00.150 Markdown Part 04](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=307bcac2-3697-4f19-b5dd-b27100acc487)|7:34<br>17:15<br>14:35<br>16:54|Introduction to Markdown<br>Hard coded columns<br>Getting the gitters<br>Making the method general purpose
 
