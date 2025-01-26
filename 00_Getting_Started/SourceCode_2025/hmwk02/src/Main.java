@@ -26,7 +26,7 @@ public class Main {
         System.out.println("Done");
     }
 
-    private static ArrayList<Book> makeBooks(ArrayList<String> lines) {
+    public static ArrayList<Book> makeBooks(ArrayList<String> lines) {
         ArrayList<Book> books = new ArrayList<>();
 
         for (var line : lines) {
@@ -51,7 +51,7 @@ public class Main {
         return books;
     }
 
-    private static void makePublications(ArrayList<String> lines, ArrayList<Book> books) {
+    public static void makePublications(ArrayList<String> lines, ArrayList<Book> books) {
 
         for (var line : lines) {
             String[] parts = line.split("\\|");
