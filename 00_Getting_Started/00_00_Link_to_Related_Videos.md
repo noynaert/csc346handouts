@@ -20,6 +20,10 @@ Github Page | Videos (run time)
 
 ## Homework 02 related videos
 
+### NOTE:  The list is currently messed up.
+
+You are probably better off using [Unit 00 Video Folder](https://mwsu.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=cd3bc822-d248-451f-aa2c-b267004401b3) to access the files until I figure out how to fix it.  I will try to fix it, but for now, use the list in Panopto.  One problem with the Panopto list is that by default Panopto only shows 25 videos on a page, and this unit has 26, so you have to scroll to the bottom and have it show 50 videos.  There is also a button that lets you go to page 2.
+
 Github<br>Page|Video|Runtime|Comment
 :---|:---|:---:|:---
 [00.095 Comparator](https://github.com/noynaert/csc346handouts/blob/main/00_Getting_Started/00_095_Comparator.md)|[00.095 Comparator Part 01](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bb5e523d-5eef-4afc-8711-b27000e0f006)<br>[00.095 Comparator Part 02](https://mwsu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c644b29a-a27c-4da1-9d1a-b27000e10633)|10:48<br>3:57|&nbsp;
