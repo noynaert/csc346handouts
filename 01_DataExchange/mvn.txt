@@ -1,4 +1,4 @@
-mvn archetype:generate -DgroupId=edu.missouriwestern.csc346.app -DartifactId=homeworkxx -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DinteractiveMode=false
+mvn archetype:generate -DgroupId=edu.missouriwestern.noynaert.app -DartifactId=homeworkxx -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DinteractiveMode=false
 
 
 Add to <build> part of pom.xml in <plugins>
