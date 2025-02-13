@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -20,6 +21,12 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) {
         ArrayList<String> people = new ArrayList<>();
+
+        //LocalDate excursion
+        LocalDate admissionDate = LocalDate.parse("1819-12-14");
+        admissionDate = admissionDate.of(1819,12,14);
+        System.out.println("Sample admission date: " + admissionDate);
+
         try {
             Credentials credentials = getCredentials(args);
             String query = "SELECT first_name, last_name, email FROM fakePeople ORDER BY last_name, first_name";
