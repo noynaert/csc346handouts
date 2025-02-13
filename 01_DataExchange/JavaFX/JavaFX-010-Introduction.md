@@ -42,6 +42,8 @@ Both FXML and OOP approaches use Panes and Layouts.
 
 ## Java Program structure.
 
+The Main class in Java must extend `Application`
+
 * The main() method calls `launch()`
 * The launch() method does a lot of behind the scenes stuff
   * There is an init() method we can override to do initializations
