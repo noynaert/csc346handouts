@@ -49,9 +49,19 @@ Both FXML and OOP approaches use Panes and Layouts.
 
 The Main class in Java must extend `Application
 
+* Application is an abstract class.  It requires us to create a `start(Stage stage)` method.
+  * The start() method is where we, as programmers, do the types of things we would normally do in main(String[] args)
 * The main() method calls `launch()`
 * The launch() method does a lot of behind the scenes stuff
   * There is an init() method we can override to do initializations
-* The `start()` method
-  * The start() method is called by launch()
-  * The start() method is where we, as programmers, start programming.
+  * launch() ends up calling our start() method
+  
+## The basic program pattern
+
+* The `start(Start start)` method gives us the main stage as an a parameter.
+  * Set the title to the Application (optional, but common)
+* Create a "root" Pane or layout manager
+* Create a root Pane of some type.
+* Create a Scene using the root Pane
+* Add children nodes (more Panes, in most cases) to the root pane
+* Show the stage
