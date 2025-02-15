@@ -43,7 +43,14 @@ The Pane is a Parent that has children.  The children are nodes that are part of
 
 Pane is the super class  The other classes are called layouts.
 
-Both FXML and OOP approaches use Panes and Layouts.
+### Controls
+
+Controls are the familiar elements such as check boxes, dropdown lists, scroll bars, lables and text fields.  These are highly specialized panes.
+
+
+### Panes, Layouts, and controls across approaches
+
+Both FXML and OOP approaches use Panes, Layouts, and controls.
 
 ## Java Program structure.
 
@@ -65,3 +72,22 @@ The Main class in Java must extend `Application
 * Create a Scene using the root Pane
 * Add children nodes (more Panes, in most cases) to the root pane
 * Show the stage
+
+```java
+public class MinimalApplication extends Application {
+    @Override
+    public void start(Stage stage) throws IOException {
+
+        stage.setTitle("Minimal Application!");  //not really required
+
+        Pane root = new HBox();
+        Scene scene = new Scene(root, 300, 200);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+}
+```
