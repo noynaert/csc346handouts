@@ -74,15 +74,25 @@ The Main class in Java must extend `Application
 * Show the stage
 
 ```java
-public class MinimalApplication extends Application {
+package com.noynaert.javafx010intro;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        stage.setTitle("Minimal Application!");  //not really required
+        stage.setTitle("Paneful stuff!");
+        Pane root = new Pane();
+        Scene primaryScene = new Scene(root,500,200);
 
-        Pane root = new HBox();
-        Scene scene = new Scene(root, 300, 200);
-        stage.setScene(scene);
+        stage.setScene(primaryScene);
         stage.show();
     }
 
