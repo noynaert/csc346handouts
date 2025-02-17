@@ -16,7 +16,7 @@ Layouts are nearly the same in AWT, Swing, and JavaFX
 ## The Standard Layouts
 
 * Hbox
-* Flowbox
+* FlowPane
 * Vbox
 * StackPane
 * GridPane
