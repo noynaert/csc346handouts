@@ -21,7 +21,7 @@ Layouts are nearly the same in AWT, Swing, and JavaFX
 * StackPane
 * GridPane
 * BorderPane
-  * Often the root, ten it contains others
+  * Often the root, and it contains other layouts
   * Some regions may be empty.  They just disappear
   * Bottom is good for a status bar
   * Top is good for a menu or options
