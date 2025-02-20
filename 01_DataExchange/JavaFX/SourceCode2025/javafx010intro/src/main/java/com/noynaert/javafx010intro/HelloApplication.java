@@ -53,7 +53,7 @@ public class HelloApplication extends Application {
         center.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
         bottom.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
         center.setAlignment(Pos.CENTER);
-        left.setPrefWidth(250);
+        //left.setPrefWidth(250);
         BorderPane root = new BorderPane();
         root.setTop(top);
         root.setBottom(bottom);
