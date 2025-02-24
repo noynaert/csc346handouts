@@ -45,6 +45,7 @@ public class HelloApplication extends Application {
         peopleComboBox.setValue(peopleList.get(0));
 
         personChosenLabel = new Label("Ann Nonymous");
+        personChosenLabel.setVisible(false);
 
        // peopleComboBox.setOnAction(event -> personChosenLabel.setText("?????????????"));
           peopleComboBox.setOnAction(new personHandler());
@@ -80,6 +81,7 @@ public class HelloApplication extends Application {
              String person = cb.getValue();
              if(person != null) {
                  personChosenLabel.setText(person);
+                 personChosenLabel.setVisible(true);
              }else{
                  personChosenLabel.setText("Please pick a person");
              }
