@@ -49,6 +49,7 @@ public class HelloApplication extends Application {
         createScene();
 
         //Illustrate Binding
+ //       combineButton.setDisable(true);
         combineButton.disableProperty().bind(firstNameTextField.textProperty().isEmpty().or(lastNameTextField.textProperty().isEmpty()));
         bottom.visibleProperty().bind(fullNameTextField.textProperty().isNotEmpty());
 
