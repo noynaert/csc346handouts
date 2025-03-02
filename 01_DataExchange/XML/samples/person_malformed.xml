@@ -1,0 +1,12 @@
+<!DOCTYPE person [
+    <!ELEMENT person (name,email,phone)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT phone (#PCDATA)>
+]>
+
+<person>
+    <name>John Doe</name>
+    <email>jdoe@gmail.com</email>
+    <phone>555-555-5555</ph>
+</person>
