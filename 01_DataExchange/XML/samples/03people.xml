@@ -1,0 +1,29 @@
+<!DOCTYPE people [
+    <!ELEMENT people (person*)>
+    <!ELEMENT person (name,email,phone)>
+    <!ELEMENT name (firstname,middlename?, lastname)>
+    <!ELEMENT firstname (#PCDATA)>
+    <!ELEMENT lastname (#PCDATA)>
+    <!ELEMENT middlename (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT phone (#PCDATA)>
+]>
+<people>
+    <person>
+        <name>
+            <firstname>Jane</firstname>
+            <lastname>Doe</lastname>
+        </name>
+        <email>jdoe@gmail.com</email>
+        <phone>555-555-5555</phone>
+    </person>
+    <person>
+        <name>
+            <firstname>John</firstname>
+            <middlename>Q</middlename>
+            <lastname>Public</lastname>
+        </name>
+        <email>jqpublic@gmail.com</email>
+        <phone>555-555-5556</phone>
+    </person>
+</people>
