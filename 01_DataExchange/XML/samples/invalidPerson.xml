@@ -4,6 +4,8 @@
     <!ELEMENT name (#PCDATA)>
     <!ELEMENT email (#PCDATA)>
     <!ELEMENT phone (#PCDATA)>
+    <!ATTLIST phone type CDATA "cell|work|fax|home">
+
 ]>
 <person>
     <name>John Doe</name>
