@@ -22,91 +22,7 @@ I think XML is better for interprogram communication because it can enforce stan
   - There is a version 1.1, but it is rarely used
 - Character set
   - Fully unicode compatible
-  - &amp; and &lt; may not appear in XML except as escape characters 
-  - &gt; and quote marks are allowed except in some special cases.
-  - Entities (see below) must be used for &amp; and &lt;. It is a good idea to also use entities for &quot; and &apos; when they are in strings. []
-  - I find &amp;nbsp; is also handy for non-breaking spaces. Also, I needed it for the last line of the table below because you can't have blank columns.
-  - The Null character (ASCII 0) or &
-
-## Entities
-
-The regular [HTML Entities](https://www.w3schools.com/html/html_entities.asp) work in XML. They also generally work in markdown (Markdown is translated directly to HTML)
-
-| Symbol |   Entity   |
-| :----: | :--------: |
-| &amp;  | &amp;amp;  |
-|  &lt;  |  &amp;lt;  |
-|  &gt;  |  &amp;gt;  |
-| &quot; | &amp;quot; |
-| &apos; | &amp;apos; |
-| &nbsp; | &amp;nbsp; |
-
-## Structure of an XML document
-
-- The first line must be the version number
-
-```xml
-<?xml version = "1.0"?>
-```
-
-- There must be a root node to the document
-- Tags are paired like in HTML
-  - Closing tags have a / as in HTML
-- Tags may be unpaired. Unpaired tags must use the notation of putting a / before the closing > symbol. For example, `<hr />`
-- Tags may have attributes
-
-```xml
-<?xml version = "1.0"?>
-<person>
-   <name>
-    <first>Max</first>
-    <last>Griffon</last>
-   </name>
-   <phone type="cell">816.555.5555</phone>
-   <phone type="office"> 816.271.4308 </phone>
-   <!-- A random comment -->
-</person>
-```
-
-### Comments
-
-Comments are the same as HTML. &lt;!-- This is a comment -->
-
--- is not allowed inside comments
-
-### Attributes
-
-### Limitations of Attributes:
-
-I think of attributes as being "one dimensional" and not very flexible.
-
-* Attributes cannot contain multiple values
-* Attributes are not easily expandable
-* Attributes cannot describe structures
-* Attributes are sometimes harder to access in code 
-* Attributes are not easy to test in a DTD
-
-There are several different recommendations about whether to use attributes or to use child elements.  One guideline is to use attributes like adjectives where the element itself is a noun
-
-I have personally run into situations where attributes were being ignored in code.
-
-In most cases it is probably better to structure the attributes as child elements.
-
-```xml
-<?xml version = "1.0"?>
-<!-- Example of structuring the phone as child elements instead of attributes -->
-<person>
-   <name>
-    <first>Max</first>
-    <last>Griffon</last>
-   </name>
-   <phone> 
-       <cell>816.555.5555</cell>
-       <office>816.271.4308</office> 
-    </phone>
-</person>
-```
-
+ 
 ## Major XML Tools
 
 ### Displaying XML
@@ -131,7 +47,7 @@ THe W3.org validator is
 * [https://validator.w3.org/](https://validator.w3.org/) (Mainly validator)
 * https://www.xmlvalidation.com/ (Checks for well-formed with option for validation)
 
-#### Namespaces `xmlns`
+## Namespaces `xmlns`
 
 With many industries using XML there is a potential for conflict between tag names.  Name spaces resolve this.
 
@@ -139,42 +55,17 @@ See [https://www.w3schools.com/xml/xml_namespaces.asp](https://www.w3schools.com
 
 Namespaces are defined at the top of the document.  Usually it is two or three letters.  It comes before each tag (See the Schema discussion below for an example)
 
-#### DTD
+## XML Tools
 
-See [https://www.tutorialspoint.com/xml/xml_dtds.htm](https://www.tutorialspoint.com/xml/xml_dtds.htm)
+XML has a lot of tools for manipulating XML Data.
 
-* DTDs are the old option for specifying what must be in a valid XML File
-* DTDs have problems
-  * They have their own syntax
-  * They are not very complete
-  * They can't really specify data types
-  * They do not do attributes
-
-Despite having a lot of problems, DTDs are still widely used.
-
-```html
-<?xml version = "1.0" encoding="utf-8"?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
-<html>
-   <!-- Head and Body tags go here -->
-</html>
-```
-
-#### Schemas
-
-Schemas are technically better than DTDs on almost every point.  But DTDs became established before Schemas were released.  Therefore Schemas are not as widely used.
-
-See [https://www.w3schools.com/xml/schema_intro.asp](https://www.w3schools.com/xml/schema_intro.asp)  This is also a nice example of namespace use
-
-
-#### Styling and Display with XSLT
+### Styling and Display with XSLT
 
 * [https://www.w3schools.com/xml/xml_xslt.asp](https://www.w3schools.com/xml/xml_xslt.asp)
 * Visit [https://w1.weather.gov/xml/current_obs/KSTJ.xml](https://w1.weather.gov/xml/current_obs/KSTJ.xml) and then do Ctrl-U to view the source  
   * Unfortunately, this link no longer works.  It was a good example of the projected use of XML to display large amounts of information as web pages
 
-#### Combining XML files
+### Combining XML files
 
 One feature of XML is th ability to combine files.  
 
