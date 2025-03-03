@@ -55,10 +55,6 @@ See [https://www.w3schools.com/xml/xml_namespaces.asp](https://www.w3schools.com
 
 Namespaces are defined at the top of the document.  Usually it is two or three letters.  It comes before each tag (See the Schema discussion below for an example)
 
-## XML Tools
-
-XML has a lot of tools for manipulating XML Data.
-
 ### Styling and Display with XSLT
 
 * [https://www.w3schools.com/xml/xml_xslt.asp](https://www.w3schools.com/xml/xml_xslt.asp)
