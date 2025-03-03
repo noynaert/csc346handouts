@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE people [
     <!ELEMENT people (person*)>
-    <!ELEMENT person (name,email,phone)>
+    <!ELEMENT person (name,email,phone+)>
     <!ELEMENT name (firstname,middlename?, lastname)>
     <!ELEMENT firstname (#PCDATA)>
     <!ELEMENT lastname (#PCDATA)>
     <!ELEMENT middlename (#PCDATA)>
     <!ELEMENT email (#PCDATA)>
     <!ELEMENT phone (#PCDATA)>
+    <!ATTLIST phone type CDATA "cell|work|fax|home">
 ]>
 <people>
     <person>
@@ -15,7 +17,8 @@
             <lastname>Doe</lastname>
         </name>
         <email>jdoe@gmail.com</email>
-        <phone>555-555-5555</phone>
+        <phone type="cell">555-555-5555</phone>
+        <phone type="work">555-555-5558</phone>
     </person>
     <person>
         <name>
@@ -24,6 +27,6 @@
             <lastname>Public</lastname>
         </name>
         <email>jqpublic@gmail.com</email>
-        <phone>555-555-5556</phone>
+        <phone type="cell">555-555-5556</phone>
     </person>
 </people>

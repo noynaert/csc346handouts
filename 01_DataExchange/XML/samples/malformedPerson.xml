@@ -3,5 +3,5 @@
 <person>
     <name>John Doe</name>
     <email>jdoe@gmail.com</email>
-    <phone type="cell">555-555-5555</phone>
+    <phone>555-555-5555</phoen>
 </person>
