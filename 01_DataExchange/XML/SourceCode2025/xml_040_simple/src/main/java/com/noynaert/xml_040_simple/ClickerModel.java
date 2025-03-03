@@ -1,3 +1,5 @@
+package com.noynaert.xml_040_simple;
+
 /**
  * This class counts the number of clicks.
  */
