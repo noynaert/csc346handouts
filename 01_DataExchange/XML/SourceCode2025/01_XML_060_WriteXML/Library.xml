@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<library>
+    <book id="12334">
+        <author>Brandon Sanderson</author>
+        <title>The Way of Kings</title>
+    </book>
+    <book id="2345">
+        <author>Robert Jordan</author>
+        <title>The Eye of the World</title>
+    </book>
+    <book id="5432">
+        <author>Isaac Asimov</author>
+        <title>I, Robot</title>
+    </book>
+</library>
