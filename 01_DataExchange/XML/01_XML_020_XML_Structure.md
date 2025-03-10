@@ -68,7 +68,7 @@ An example with nesting
 ```xml
 <!DOCTYPE people [
     <!ELEMENT people (person*)>
-    <!ELEMENT person (name,email,phone+)>
+    <!ELEMENT person (name,email,phone*)>
     <!ELEMENT name (firstname,middlename?, lastname)>
     <!ELEMENT firstname (#PCDATA)>
     <!ELEMENT lastname (#PCDATA)>
