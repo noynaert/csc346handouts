@@ -12,4 +12,7 @@
         <author>Isaac Asimov</author>
         <title>I, Robot</title>
     </book>
+    <book id="0000">
+        <title>Lord of the Rings</title>
+    </book>
 </library>
