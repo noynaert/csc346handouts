@@ -9,8 +9,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 
 public class ParserApp {
+    String filename = "Library.xml";
     public static void main(String[] args) {
         try{
+
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
 
