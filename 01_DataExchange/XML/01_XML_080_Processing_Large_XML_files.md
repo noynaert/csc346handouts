@@ -8,7 +8,7 @@ There are methods of processing documents in pieces.  They do not load the entir
 * StAX -- This is a newer model
 
 &nbsp;|SAX|StAX
-:---|:---|:---
+:---|:---:|:---:
 Can read xml files|Yes|Yes
 Can write xml files|No|Yes
 Validation|Yes|No
