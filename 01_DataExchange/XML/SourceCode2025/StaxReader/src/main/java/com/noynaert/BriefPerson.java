@@ -49,6 +49,9 @@ public class BriefPerson {
     public String getEmail() {
         return email;
     }
+    public void addPhoneNumber(String phoneNumber){
+        phoneNumbers.add(phoneNumber);
+    }
 
     public void setEmail(String email) {
         this.email = email;
@@ -56,7 +59,7 @@ public class BriefPerson {
     public String toString(){
         String line = "";
         String name = String.format("%s, %s %s", lastName, firstName, middleName).trim();
-        line=String.format("%s|%s|%s|%d", id, name, email,phoneNumbers.size());
+        line=String.format("|%s|%s|%s|%d|", id, name, email,phoneNumbers.size());
         return line;
     }
 }
