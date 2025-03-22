@@ -44,7 +44,6 @@ From [Java Code Geeks](https://examples.javacodegeeks.com/wp-content/uploads/201
 
 &nbsp;|**HashMap**|**HashTable**|**TreeMap**|**Linked HashMap**
 :---:|:---|:---|:---|:---
-Ordered|No|No|Yes|Yes
 Thread-safe|No, non-synchronized|Yes, Synchronized|No, non-synchronized|No
 Ordered|No|No|Yes<br/>(Collation order of keys)|Yes<br/>(Maintains Insertion Order)
 Speed| Faster than a HashTable|Slower than a HashMap|Slower than either|Faster than a TreeMap
