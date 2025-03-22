@@ -46,7 +46,7 @@ From [Java Code Geeks](https://examples.javacodegeeks.com/wp-content/uploads/201
 :---:|:---|:---|:---|:---
 Ordered|No|No|Yes|Yes
 Thread-safe|No, non-synchronized|Yes, Synchronized|No, non-synchronized|No
-Ordered|No|No|Yes|Yes
+Ordered|No|No|Yes<br/>(Collation order of keys)|Yes<br/>(Maintains Insertion Order)
 Speed| Faster than a HashTable|Slower than a HashMap|Slower than either|Faster than a TreeMap
 Null keys|One null key allowed|No null key|No null key|One null key allowed
 Null values|Allowed|Not Allowed|Multiple keys may have null values|Allowed
