@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+    <script>
+      var jan = new Object();
+      jan.name = "Jan";
+      jan.age = 25;
+      var chris = { name: "Chris", age: 30 };
+      jan.profession = "Programmer";
+      jan.address = { street: "123 Main St", city: "Springfield", state: "IL" };
+      jan.children = ["Sara", "Jake", "John"];
+      alex = {
+        name: "Alex",
+        age: 35,
+        profession: "Doctor",
+        address: { street: "456 Elm St", city: "Springfield", state: "IL" },
+        children: ["Sara", "Jake", "John"],
+      };
+      jan.friends = [chris, alex];
+    </script>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <p>
+      <script>
+        document.write(jan.name + " is " + jan.age + " years old.");
+        console.log(jan);
+        s = JSON.stringify(jan, null, 2);
+        console.log(s);
+      </script>
+    </p>
+  </body>
+</html>
