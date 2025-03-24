@@ -2,8 +2,8 @@
 
 ## Multiple meanings for API
 
-    * API can mean documentation for a language, such as the Java API
-    * API can mean the system for accessing data from a website using programming to control HTTP connections
+* API can mean documentation for a language, such as the Java API
+* API can mean the system for accessing data from a website using programming to control HTTP connections
 
 ## Restful APIs
 
