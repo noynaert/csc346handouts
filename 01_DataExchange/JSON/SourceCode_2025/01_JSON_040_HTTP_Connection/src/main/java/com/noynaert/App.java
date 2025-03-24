@@ -7,6 +7,9 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * Demonstrates reading from API using HTTP Connection
@@ -22,17 +25,18 @@ public class App {
 
     public static void main( String[] args )
     {
-        String jsonResult = sendGet();
+        String jsonResult = sendGet(5,59,"How long is a cat's tail?");
         printTheFact(jsonResult);
 
         System.out.println( "Done!" );
     }
 
-    private static String sendGet() {
+    private static String sendGet(int limit, int max_length, String question) {
         String jsonResult = null;
         try{
             //set up the HTTP Header
-            URL url = new URL(baseURL);
+            String urlString = makeURL(baseURL,max_length, limit, question);
+            URL url = new URL(urlString);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setRequestProperty("User-Agent", USER_AGENT);
@@ -59,6 +63,28 @@ public class App {
         }
 
         return jsonResult;
+    }
+
+    private static String makeURL(String baseURL, int maxLength, int limit, String question) {
+        String url = "";
+        Map<String,String> parameters= new LinkedHashMap<>();
+        parameters.put("max_length", Integer.toString(maxLength));
+        parameters.put("limit", Integer.toString(limit));
+        parameters.put("question", question);
+
+        StringBuilder builder = new StringBuilder(baseURL);
+        for(String key: parameters.keySet()){
+            builder.append((builder.length()==0) ? "?" : "&");
+            String value = parameters.get(key);
+            builder.append(key);
+            builder.append("=");
+            value = URLEncoder.encode(value);
+            builder.append(value);
+        }
+        url = builder.toString();
+        System.out.println(url);
+
+        return url;
     }
 
     private static void printTheFact(String jsonResult) {
