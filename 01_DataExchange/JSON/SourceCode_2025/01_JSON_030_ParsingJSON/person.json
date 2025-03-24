@@ -1,0 +1,34 @@
+{
+  "name": "Jan",
+  "age": 25,
+  "profession": "Programmer",
+  "address": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL"
+  },
+  "children": [
+    "Sara",
+    "Jake",
+    "John"
+  ],
+  "friends": [
+    {
+      "name": "Chris",
+      "age": 30
+    },
+    {
+      "name": "Alex",
+      "age": 35,
+      "profession": "Doctor",
+      "address": {
+        "street": "456 Elm St",
+        "city": "Springfield",
+        "state": "IL"
+      }
+    },
+    {
+      "name":"Cameron"
+    }
+  ]
+}
