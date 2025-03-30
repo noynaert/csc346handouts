@@ -1,4 +1,4 @@
-# CSV
+# 01.CSV.030 File Format
 
 CSV is a file that is conventienct for loading into spreadsheets and databases.  
 
@@ -16,4 +16,4 @@ The Mkyong article uses the example of using a delimiter.  It uses the semicolon
 
 One solution to the delimiter problem is to use something like the pipe symbol ( | ) which is less common in text.
 
-Perhaps the most useful delimeter is the tab ( '\t' ) character.  This is not embedded in text.  In addition, spreadsheets use the tab to move between columns, and thus tabs usually can't be embedded in text.  Tabs are also a standard ASCII character so they are supported in almost every programming language down to assembly language.
+Perhaps the most useful delimiter is the tab ( '\t' ) character.  This is not embedded in text.  In addition, spreadsheets use the tab to move between columns, and thus tabs usually can't be embedded in text.  Tabs are also a standard ASCII character so they are supported in almost every programming language down to assembly language.
