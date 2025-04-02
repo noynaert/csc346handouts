@@ -19,11 +19,17 @@ import java.util.Map;
 public class App {
     public static void main(String[] args) {
         String fileName = "birthdays.csv";
-//        ArrayList<Map<String, String>> people = new ArrayList<>();
-//        readMaps(fileName, people);
 
-        ArrayList<String[]> people = new ArrayList<>();
-        readStrings(fileName,people);
+           //Read an ArrayList of maps.  Each record is a map.
+        ArrayList<Map<String, String>> people = new ArrayList<>();
+        readMaps(fileName, people);
+
+        //Read an ArrayList of arrays of Strings.  Each record is an array of string
+        //No labels are involved, everything is positional
+//        ArrayList<String[]> people = new ArrayList<>();
+//        readStrings(fileName, people);
+
+
 
         System.out.println("Done!");
     }
@@ -65,10 +71,17 @@ public class App {
                     .build();
             CSVReaderHeaderAware csvReader = new CSVReaderHeaderAware(reader);
 
-//
+            people.addAll(csvReader.readAll());
+
+            for (String[] record : people) {
+                String name = record[0];
+                String birthday = record[1];
+                int id = Integer.parseInt(record[2]);
+                System.out.printf("%s was born on %s and has id %d\n", name, birthday, id);
+            }
 
             reader.close();
-            System.out.println("\uD83D\uDDFA\uFE0F Done with readMaps \uD83D\uDDFA\uFE0F");
+            System.out.println(" Done with readStrings");
         }catch(Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
