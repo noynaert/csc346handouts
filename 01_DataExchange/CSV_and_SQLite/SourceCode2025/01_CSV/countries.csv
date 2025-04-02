@@ -1,8 +1,10 @@
-person  country
-"Marie Curie"   "France"
-"Albert Einstein"   Germany
-Rowand Atkinson "Great Britain"
-Galileo Galilei Italy
-Isaac Newton    Great Britain
-Grace Hopper    USA
-"Benjamin Franklin" "USA"
+person,country
+"Marie Curie","France"
+"Albert Einstein",Germany
+Rowand Atkinson,"Great Britain"
+Galileo Galilei, Italy
+"Mark Twain", "USA"
+Isaac Newton,    Great Britain
+Grace Hopper,    USA
+"Benjamin Franklin", "USA"
+"Teddy Roosevent", "USA"

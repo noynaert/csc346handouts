@@ -1,5 +1,11 @@
 package com.noynaert;
 
+import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
+import com.opencsv.bean.CsvNumber;
+
+import java.io.Serializable;
+
 /**
  * This is a POJO and a JavaBean
  *
@@ -7,17 +13,29 @@ package com.noynaert;
  * @since March 2025
  */
 
-public class Person {
-    String name;
-    String birthday;
-    int id;
-    String country;
+public class Person implements Serializable {
+
+    @CsvBindByPosition(position = 0)
+    private String name;
+
+    @CsvBindByPosition(position = 1)
+    private String birthday;
+
+    @CsvBindByPosition(position = 2)
+    @CsvNumber(value = "#0")
+    private int id;
+    @CsvBindByPosition(position = 3)
+    private String country;
 
     public Person(String name, String birthday, int id, String country) {
         setName(name);
         setBirthday(birthday);
         setId(id);
         setCountry(country);
+    }
+
+    public Person() {
+        this("No Name", "No Birthday", Integer.MIN_VALUE, "No Country");
     }
 
     public String getName() {
