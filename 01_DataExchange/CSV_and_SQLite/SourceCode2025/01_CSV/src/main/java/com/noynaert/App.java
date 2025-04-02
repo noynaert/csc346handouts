@@ -19,64 +19,61 @@ import java.util.Map;
 public class App {
     public static void main(String[] args) {
         String fileName = "birthdays.csv";
-        ArrayList<Map<String, String>> people = new ArrayList<>();
-        readLines(fileName, people);
-        people.clear();
-        readAsArrayOfStrings(fileName);
+//        ArrayList<Map<String, String>> people = new ArrayList<>();
+//        readMaps(fileName, people);
+
+        ArrayList<String[]> people = new ArrayList<>();
+        readStrings(fileName,people);
+
         System.out.println("Done!");
     }
 
-    public static void readAsArrayOfStrings(String fileName) {
+    public static void readMaps(String fileName, ArrayList<Map<String, String>> people) {
         try {
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
 
-            BufferedReader reader =
-                    new BufferedReader(new FileReader(fileName));
-            CSVParser parser = new CSVParserBuilder().withSeparator(',')
-                    .withSeparator(':')
+            CSVParser parser = new CSVParserBuilder()
+                    .withSeparator(',')
                     .withQuoteChar('"')
-                    //.withIgnoreQuotations(true)
+                    .withIgnoreQuotations(true)
                     .build();
             CSVReaderHeaderAware csvReader = new CSVReaderHeaderAware(reader);
-            List<String[]> list = csvReader.readAll();
 
-            for (String[] record : list) {
-                String person = record[0];
-                String birthday = record[1];
-                int id = Integer.parseInt(record[2]);
-                System.out.printf("%s was born on %s and has an id of %d\n", person, birthday, id);
-            }
-
-            reader.close();
-            System.out.println("Almost Done!");
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
-    }
-
-    public static void readLines(String fileName,ArrayList<Map<String, String>> people) {
-        try {
-
-            BufferedReader reader =
-                    new BufferedReader(new FileReader(fileName));
-            CSVParser parser = new CSVParserBuilder().withSeparator(',')
-                    .withSeparator(':')
-                    .withQuoteChar('"')
-                    //.withIgnoreQuotations(true)
-                    .build();
-            CSVReaderHeaderAware csvReader = new CSVReaderHeaderAware(reader);
             Map<String, String> record;
             while ((record = csvReader.readMap()) != null) {
-                //System.out.println(record);
                 String name = record.get(" Full Name");
                 String birthday = record.get("Birthday (Gregorian Calendar)");
                 int id = Integer.parseInt(record.get("id"));
                 people.add(record);
-                System.out.printf("%s was born on %s and has an id of %d\n", name, birthday, id);
+                System.out.printf("%s was born on %s and has id %d\n", name, birthday, id);
             }
+
             reader.close();
-            System.out.println("Almost Done!");
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
+            System.out.println("\uD83D\uDDFA\uFE0F Done with readMaps \uD83D\uDDFA\uFE0F");
+        }catch(Exception e) {
+            System.out.println("Error: " + e.getMessage());
         }
     }
+    private static void readStrings(String fileName, List<String[]> people) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+
+            CSVParser parser = new CSVParserBuilder()
+                    .withSeparator(',')
+                    .withQuoteChar('"')
+                    .withIgnoreQuotations(true)
+                    .build();
+            CSVReaderHeaderAware csvReader = new CSVReaderHeaderAware(reader);
+
+//
+
+            reader.close();
+            System.out.println("\uD83D\uDDFA\uFE0F Done with readMaps \uD83D\uDDFA\uFE0F");
+        }catch(Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+
+    }
+
 }
