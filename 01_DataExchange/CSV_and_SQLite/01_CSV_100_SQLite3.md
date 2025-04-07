@@ -9,7 +9,6 @@ SQLite3 is a local sql database.
 
 ## Resources
 * [SQLite Home Page](https://www.sqlite.org/)
-* 
 * [Chinook sample database](https://www.sqlitetutorial.net/sqlite-sample-database/)
   * ![Chinook database schema](chinook.png)
 
@@ -21,6 +20,12 @@ To use the client, use the command `sqlite3` followed by the name of the databas
 
 `.quit`
 
+## Joining tables
+
+```
+sqlite> select * from albums inner join tracks on albums.albumid = tracks.albumid order by albumid;
+```
+
 
 ## Importing a .CSV file
 
@@ -29,9 +34,3 @@ The same general technique may be used to import .JSON or .XML.
 Start the cli interface.  Use the name of the database you want to create if it doesn't exist.
 
 Use the following command, where the arguments are the name of the csv file and the name of the table.
-
-## Joining tables
-
-```
-sqlite> select * from albums inner join tracks on albums.albumid = tracks.albumid order by albumid;
-```
