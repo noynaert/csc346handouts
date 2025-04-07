@@ -1,16 +1,18 @@
 # 01 CSV 100 SQLite3
 
+## Resources
+* [SQLite Home Page](https://www.sqlite.org/)
+* [Chinook sample database](https://www.sqlitetutorial.net/sqlite-sample-database/)
+  * ![Chinook database schema](chinook.png)
+
+## Overview
+
 SQLite3 is a local sql database.
 
 * Runs on the local machine
 * Will NOT run on a server.  It does not support multiple simultaneous users
 * There is a command-line frontend, or it may be read in clients like Heidi or the Idea database tool
-* It is mainly intended to be embedded in Java applications
-
-## Resources
-* [SQLite Home Page](https://www.sqlite.org/)
-* [Chinook sample database](https://www.sqlitetutorial.net/sqlite-sample-database/)
-  * ![Chinook database schema](chinook.png)
+* It is mainly intended to be embedded in Java, Python, C++ or other language applications
 
 ## Starting CLI Client
 
