@@ -3,6 +3,8 @@ package edu.missouriwestern.noynaert.flagz;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import static edu.missouriwestern.noynaert.flagz.FlagzApplication.db;
+
 @RestController
 public class FlagzController {
 
@@ -17,6 +19,11 @@ public class FlagzController {
     }
     @GetMapping("/about")
     public String about() {
-        return "Flags are fun!";
+        String s = "Flags are fun!";
+        return s;
+    }
+    @GetMapping("/flags")
+    public Iterable<Flag> flags() {
+        return db.findAll();
     }
 }
