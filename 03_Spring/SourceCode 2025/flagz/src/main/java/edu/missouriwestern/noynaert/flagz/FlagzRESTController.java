@@ -17,7 +17,7 @@ public class FlagzRESTController {
     public Iterable<Flag> flags() {
         return db.findAll();
     }
-    @GetMapping("/flag/{id}")
+    @GetMapping("/flag/{id}/json")
     public Flag flag(@PathVariable int id) {
         Flag flag = db.findById(id);
         return flag;

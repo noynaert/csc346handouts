@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Flag #<span th:text="${f.id}"></span></h1>
+<ul>
+    <li>ID: <span th:text="${f.id}"></span></li>
+    <li>Description: <span th:text="${f.description}"></span></li>
+    <li>File Name: <span th:text="${f.fileName}"></span></li>
+    <li>the toString() : <span th:text="${f}"></span></li>
+
+</ul>
+</body>
+</html>
