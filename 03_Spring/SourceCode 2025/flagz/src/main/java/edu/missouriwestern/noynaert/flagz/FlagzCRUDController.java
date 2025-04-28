@@ -38,5 +38,12 @@ public class FlagzCRUDController {
         return ResponseEntity.badRequest().body(e.getMessage());
     }
 
+    @GetMapping("/flags")
+    public String flags(Model model) {
+        Iterable<Flag> flags = db.findAll();
+        model.addAttribute("flags", flags);
+        model.addAttribute("size", db.getSize());
+        return "flags.html";
+    }
 
 }

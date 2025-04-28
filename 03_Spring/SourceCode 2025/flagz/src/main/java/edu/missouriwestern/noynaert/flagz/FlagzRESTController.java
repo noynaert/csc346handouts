@@ -13,7 +13,8 @@ import static edu.missouriwestern.noynaert.flagz.FlagzApplication.db;
 public class FlagzRESTController {
 
 
-    @GetMapping({"/flags/json","/flags"})
+    //@GetMapping({"/flags/json","/flags"})
+    @GetMapping("/flags/json")
     public Iterable<Flag> flags() {
         return db.findAll();
     }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Flags</title>
+</head>
+<body>
+<h1>Flags</h1>
+
+<ul>
+    <li>Missouri
+        <ul>
+            <li>St. Joseph</li>
+            <li>Jefferson City</li>
+        </ul>
+    </li>
+    <li>Texas
+      <ul>
+          <li>Houston</li>
+          <li>Austin</li>
+      </ul>
+    </li>
+    <li>California</li>
+</ul>
+
+<ul th:each="flag : ${flags}">
+    <li>A flag
+      <ul>
+          <li><span th:text="${flag.id}"></span></li>
+          <li><span th:text="${flag.description}"></span></li>
+          <li><span th:text="${flag.fileName}"></span></li>
+      </ul>
+    </li>
+</ul>
+
+</body>
+</html>
