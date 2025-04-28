@@ -23,6 +23,10 @@ public class Flagdb {
         db.put(f.getId(), f);
     }
 
+    public int getSize() {
+        return db.size();
+    }
+
     public Flag findById(int id) {
         Flag flag = db.get(id);
         if (flag == null) {
