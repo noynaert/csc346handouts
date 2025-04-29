@@ -4,9 +4,7 @@ package edu.missouriwestern.noynaert.flagz;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import static edu.missouriwestern.noynaert.flagz.FlagzApplication.db;
@@ -45,5 +43,20 @@ public class FlagzCRUDController {
         model.addAttribute("size", db.getSize());
         return "flags.html";
     }
+
+    //add a flag record
+    @GetMapping("/add")  //Displays the form
+    public String showAddFlagForm(Model model) {
+        model.addAttribute("f", new Flag());
+        return "add.html";
+    }
+
+    @PostMapping("/add")  //processes the form on return
+    public String processAddFlagForm(@ModelAttribute("f") Flag flag) {
+        db.insert(flag);
+        //return "addSuccess.html";
+        return "redirect:/flags#" + flag.getId();
+    }
+
 
 }

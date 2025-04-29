@@ -24,7 +24,7 @@
 </ul>
 
 <ul th:each="flag : ${flags}">
-    <li>A flag
+    <li  th:id="${flag.id}">A flag
       <ul>
           <li><span th:text="${flag.id}"></span></li>
           <li><span th:text="${flag.description}"></span></li>
