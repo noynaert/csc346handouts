@@ -34,6 +34,11 @@ public class Flagdb {
         }
         return flag;
     }
-
+    public void deleteById(int id) {
+       Flag flag = db.remove(id);
+       if (flag == null) {
+           throw new ResponseStatusException(HttpStatus.NOT_FOUND,String.format("Flag %d not found",id));
+       }
+    }
 
 }

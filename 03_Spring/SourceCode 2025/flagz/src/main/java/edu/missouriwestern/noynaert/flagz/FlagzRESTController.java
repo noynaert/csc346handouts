@@ -23,13 +23,13 @@ public class FlagzRESTController {
         Flag flag = db.findById(id);
         return flag;
     }
-
-
-
-
-
+    @GetMapping("/del{id}/json")
+    public void delete(@PathVariable int id) {
+        db.deleteById(id);
+    }
     @ExceptionHandler(ResponseStatusException.class)
     public ResponseEntity<String> handleException(Exception e) {
         return ResponseEntity.badRequest().body(e.getMessage());
     }
+
 }
