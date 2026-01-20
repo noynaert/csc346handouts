@@ -14,18 +14,18 @@ The `gh` tool only works with Github, and it does not work with other git hostin
 
     git clone git@github.com:user/repository.git
 
-    ## Using git commands
+## Using git commands
 
-    Git commands only work inside a git repository.  You must be in the directory or subdirectory of the git repository to use git commands.
+Git commands only work inside a git repository.  You must be in the directory or subdirectory of the git repository to use git commands.
 
-    ## Basic git commands
-    Here are some basic git commands that you will use frequently:
+## Basic git commands
+Here are some basic git commands that you will use frequently:
 
-    - `git status` - Show the status of the repository.  This will show you which files have been modified, which files are staged for commit, and which files are untracked.
-    - `git add <file>` - Stage a file for commit.  This will add the file to the staging area.  A common variation is `git add .` which stages all modified and untracked files in the current directory and its subdirectories.  If you are in the root of your repository, this stages all changes in the repository. 
-    - `git commit -m "message"` - Commit the staged files to the repository.  The message should be a brief description of the changes you made.
-    - `git push` - Push the committed changes to the remote repository on Github.
-    - `git pull` - Pull the latest changes from the remote repository on Github. This is useful if you are working on two different computers or if you are collaborating with others.  If you are only maintaining your homwork on a single computer, you probably will not need to use this command.
+- `git status` - Show the status of the repository.  This will show you which files have been modified, which files are staged for commit, and which files are untracked.
+- `git add <file>` - Stage a file for commit.  This will add the file to the staging area.  A common variation is `git add .` which stages all modified and untracked files in the current directory and its subdirectories.  If you are in the root of your repository, this stages all changes in the repository. 
+- `git commit -m "message"` - Commit the staged files to the repository.  The message should be a brief description of the changes you made.
+- `git push` - Push the committed changes to the remote repository on Github.
+- `git pull` - Pull the latest changes from the remote repository on Github. This is useful if you are working on two different computers or if you are collaborating with others.  If you are only maintaining your homwork on a single computer, you probably will not need to use this command.
 
 ## Edit the README.md file
 
@@ -38,6 +38,7 @@ The README.md file is a markdown file.  Markdown is a simple markup language tha
 * Use # to create the title.  On the first line of the file you should see a # followed by a space and then the title of the project.
 * Use ## to create sub-headings.  Be sure to put a space after the ##, and make sure the ## are the first characters on the line.
 Double space at the end of a line to create a line break. ***Do not indent the first line of paragraphs.***
+* Links are created using the following syntax:  `[link text](url)`.  For example, to create a link to Google, you would use the following syntax:  `[Google](https://www.google.com)`.
 
 ## .gitignore file
 
