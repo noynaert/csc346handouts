@@ -1,4 +1,4 @@
-# 00.112 Working with your Git Repository and Github
+# 00.162 Working with your Git Repository and Github
 
 ## GH CLI option
 
