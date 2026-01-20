@@ -38,7 +38,7 @@ The README.md file is a markdown file.  Markdown is a simple markup language tha
 * Use # to create the title.  On the first line of the file you should see a # followed by a space and then the title of the project.
 * Use ## to create sub-headings.  Be sure to put a space after the ##, and make sure the ## are the first characters on the line.
 Double space at the end of a line to create a line break. ***Do not indent the first line of paragraphs.***
-* Links are created using the following syntax:  `[link text](url)`.  For example, to create a link to Google, you would use the following syntax:  `[Google](https://www.google.com)`.
+* Links are created using the following syntax:  `[link text](url)`.  For example, to create a link to Google, you would use the following syntax:  `[Google](https://www.google.com)`. This would look like this: [Google](https://www.google.com).
 
 ## .gitignore file
 
@@ -54,14 +54,12 @@ I suggest adding the following lines to the .gitignore file:
 *.log
 *.bak
 tmp/*
-
+```
 ## Now let's update the repository
 
 ```
-  git stash
-  git add .
-  git commit -m 'Initial commit'
-  git push
-
-  Now, go look at your github repository in your web browser.  You should see the README.md file and the .gitignore file with your updates.
-
+   git status
+   git add .
+   git commit -m "Updated README.md and .gitignore"
+   git push
+``` 
