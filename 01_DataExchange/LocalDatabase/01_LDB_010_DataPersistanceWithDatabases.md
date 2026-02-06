@@ -1,0 +1,21 @@
+# 01.LBD.010 Data Persistance with Databases
+
+Almost any serious application needs to store data persistently.  While there are many ways to do this, databases are the most common solution.  Databases provide a structured way to store, retrieve, and manipulate data.  They also provide features for data integrity, security, and concurrency control.
+
+Flat files can be simple. However, many times we need to pull data selectively from a large data set.  Databases provide powerful query languages, such as SQL, that allow us to retrieve specific data quickly and efficiently.
+
+There can also be security issues.  Also, in something like an mobile phone app, a program may be authorized to access only certain data.  Databases provide mechanisms for controlling access to data based on user roles and permissions.
+
+## Local vs. Remote Databases
+
+Databases can be classified into two main categories: local databases and remote databases.  Remote databases are hosted on a server and accessed over a network.  Local databases are stored on the same machine as the application that uses them.
+
+## SQL vs. NoSQL Databases
+
+Databases can also be classified based on their data models.  The two main types are SQL (relational) databases and NoSQL (non-relational) databases.
+
+SQL databases use a structured schema to define tables, columns, and relationships between data.  They use SQL as the query language.  Examples of SQL databases include MySQL, PostgreSQL, and Oracle Database.
+
+NoSQL databases use a flexible schema to store data in various formats, such as key-value pairs, documents, graphs, or columns.  They do not use SQL as the query language.  Examples of NoSQL databases include MongoDB, Cassandra, and Redis.
+
+At this point in the course we will focus on SQL databases. 
