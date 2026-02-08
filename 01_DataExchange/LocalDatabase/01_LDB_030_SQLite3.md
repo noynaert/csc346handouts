@@ -17,6 +17,7 @@ On Fedora, you can use the following command:
 
 ```bash
 sudo dnf install sqlite3
+```
 
 If, by the way, you use ARCH, you are obviously a superior human being, and you can figure it out yourself.
 
@@ -24,7 +25,7 @@ If, by the way, you use ARCH, you are obviously a superior human being, and you 
 
 On Windows, you can download the precompiled binaries from the SQLite website.  Go to [https://sqlite.org/download.html](https://sqlite.org/download.html) and download the "sqlite-tools-win32-x86-xxxxxx.zip" file.  Extract the contents of the zip file to a directory of your choice, and add that directory to your PATH environment variable.
 
-![SQLite Download](./images/sqlite_download.png)
+![SQLite Download](images/sqlit3Download.png)
 
 ## Get the sample "Chinook" database
 
@@ -32,7 +33,7 @@ Download the the Chinook sample database from [https://www.sqlitetutorial.net/sq
 
 The diagram of the database is
 
-![Chinook Database Diagram](images/chinook_database_diagram.png)
+![Chinook Database Diagram](images/sqlite-sample-database-color.jpg)
 
 
 There is also a nice set of short tutorials on this page.
