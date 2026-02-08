@@ -50,5 +50,5 @@ Some basic commands:
 
 * .quit - exit sqlite
 * .tables - list the tables in the database
-* selet * from employees; - run a SQL query
+* select * from employees; - run a SQL query
 * .schema [table name] - show the schema for the specified table, or for all
