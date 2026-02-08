@@ -32,7 +32,8 @@ Download the the Chinook sample database from [https://www.sqlitetutorial.net/sq
 
 The diagram of the database is
 
-![Chinook Database Diagram](./images/chinook_database_diagram.png)
+![Chinook Database Diagram](images/chinook_database_diagram.png)
+
 
 There is also a nice set of short tutorials on this page.
 
