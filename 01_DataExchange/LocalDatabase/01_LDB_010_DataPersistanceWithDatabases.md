@@ -33,6 +33,8 @@ There can also be security issues.  In something like an mobile phone app, a pro
 
 Databases can be classified into two main categories: local databases and remote databases.  Remote databases are hosted on a server and accessed over a network.  Local databases are stored on the same machine as the application that uses them.
 
+Local databases are sometimes known as embedded databases or in-memory databases.  They are designed to be used by a single application and do not require a separate server process.  They are often used in mobile apps, desktop applications, and small web applications.
+
 ## SQL vs. NoSQL Databases
 
 Databases can also be classified based on their data models.  The two main types are SQL (relational) databases and NoSQL (non-relational) databases.
