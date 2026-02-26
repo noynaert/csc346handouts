@@ -6,6 +6,9 @@ public class Office {
     private String type;
     private double size;
 
+    public Office() {
+        this(-999, "????", "?????", -99);
+    }
     public Office(int id, String number, String type, double size) {
         setID(id);
         setNumber(number);

@@ -1,10 +1,6 @@
 package com.noynaert;
 
-import com.noynaert.utility.Utility;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.*;
@@ -19,7 +15,7 @@ import java.util.List;
 public class App 
 {
     private static Connection conn;
-    private static String url = "jdbc:sqlite:resources/employees.db";
+    private static final String url = "jdbc:sqlite:resources/employees.db";
 
     public static void main( String[] args )
     {
@@ -29,15 +25,15 @@ public class App
         try{
             conn = DriverManager.getConnection(url);
             System.out.println("Opened database successfully");
-            getEmployees(employees, "SELECT * FROM employees ORDER BY last_name, first_name");
-            Utility.printList("Employees", employees);
+//            getEmployees(employees, "SELECT * FROM employees ORDER BY last_name, first_name");
+//            Utility.printList("Employees", employees);
 
             // Create a table for offices
-            //createOfficeTable();
+            createOfficeTable();
 
             //insert some data into the offices table
-            //insertRecords();
-            addImages(pathToFiles);
+            insertRecords();
+            //addImages(pathToFiles);
             conn.close();
         }catch(Exception e){
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
@@ -112,21 +108,49 @@ public class App
         statement.executeUpdate(createTable);
     }
 
-    public static void insertRecords()throws SQLException{
+    public static void insertRecords() throws SQLException, IOException {
         //Statement statement = conn.createStatement();
         PreparedStatement preparedStatement = conn.prepareStatement(
                 "INSERT INTO offices (number, office_type, size) VALUES (?, ?, ?)");
-        ArrayList<Office> inputData = new ArrayList<>();
-        inputData.add(new Office("101", "Window", 1000));
-        inputData.add(new Office("201B", "Cubical", 63.5));
-        inputData.add(new Office("301", "Corner", 1200));
+// I moved this data to a file called offices.tdf
+//        ArrayList<Office> inputData = new ArrayList<>();
+//        inputData.add(new Office("101", "Window", 1000));
+//        inputData.add(new Office("201B", "Cubical", 63.5));
+//        inputData.add(new Office("301", "Corner", 1200));
 
-        for(Office office : inputData){
-            preparedStatement.setString(1, office.getNumber());
-            preparedStatement.setString(2, office.getType());
-            preparedStatement.setDouble(3, office.getSize());
+
+        //Now I read the data from the file offices.tdf
+//        for(Office office : inputData){
+//            preparedStatement.setString(1, office.getNumber());
+//            preparedStatement.setString(2, office.getType());
+//            preparedStatement.setDouble(3, office.getSize());
+//            preparedStatement.executeUpdate();
+//        }
+
+        BufferedReader input = new BufferedReader(new FileReader("resources/offices.tdf"));
+        String line;
+        while ((line = input.readLine()) != null) {
+            Office oneOffice = makeOfficeFromLine(line);
+            preparedStatement.setString(1, oneOffice.getNumber());
+            preparedStatement.setString(2, oneOffice.getType());
+            preparedStatement.setDouble(3, oneOffice.getSize());
             preparedStatement.executeUpdate();
+
         }
+
+    }
+
+    private static Office makeOfficeFromLine(String line) {
+        int cursor = 0;
+        Office o = new Office();
+        o.setNumber(line.substring(cursor, cursor + 5));
+        cursor += 5;
+        o.setType(line.substring(cursor, cursor + 7));
+        cursor += 7;
+        String s = line.substring(cursor, cursor + 5);
+        double squareFeet = Double.parseDouble(s);
+        o.setSize(squareFeet);
+        return o;
     }
 
     private static void getEmployees(ArrayList<Employee> employees, String query) throws SQLException {
