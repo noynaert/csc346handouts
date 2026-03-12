@@ -1,0 +1,65 @@
+[
+ {
+   "ID": 45912,
+   "First Name": "Aria",
+   "Last Name": "Baker",
+   "Height": 165.3,
+   "Birth Date": "1994-02-26",
+   "Motto": "Build well, sleep well.",
+   "City": "Seatle, Oregon"
+ },
+ {
+   "ID": 72506,
+   "First Name": "Oliver",
+   "Last Name": "Hall",
+   "Height": 180.8,
+   "Birth Date": "1982-12-06",
+   "Motto": "Code clean, sleep better.",
+   "City": "Topeka, Kansas"
+ },
+ {
+   "ID": 38041,
+   "First Name": "Zoey",
+   "Last Name": "Rivera",
+   "Height": 163.6,
+   "Birth Date": "1997-05-21",
+   "Motto": "Good habits win.",
+   "City": "Vancouver, British Columbia, Canada"
+ },
+ {
+   "ID": 90812,
+   "First Name": "Jacob",
+   "Last Name": "Campbell",
+   "Height": 177.1,
+   "Birth Date": "1985-08-13",
+   "Motto": "Prepare well, perform better.",
+   "City": "Brookfield, Missouri"
+ },
+ {
+   "ID": 54679,
+   "First Name": "Nora",
+   "Last Name": "Mitchell",
+   "Height": 164.9,
+   "Birth Date": "1991-11-02",
+   "Motto": "Stay steady, stay strong.",
+   "City": "Muncie, Indiana"
+ },
+ {
+   "ID": 19375,
+   "First Name": "Caleb",
+   "Last Name": "Carter",
+   "Height": 179.4,
+   "Birth Date": "1988-06-28",
+   "Motto": "Simple ideas, powerful results.",
+   "City": "Chicago, Illinois"
+ },
+ {
+   "ID": 86453,
+   "First Name": "Victoria",
+   "Last Name": "Roberts",
+   "Height": 166.5,
+   "Birth Date": "1992-03-15",
+   "Motto": "Truth first, comfort later.",
+   "City": "Tokyo"
+ }
+]
