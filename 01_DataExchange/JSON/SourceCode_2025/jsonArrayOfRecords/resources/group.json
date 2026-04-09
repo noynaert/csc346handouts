@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Fred",
+    "age": 28
+  },
+  {
+    "name": "Wilma",
+    "age": 27
+  },
+  {
+    "name": "Barney",
+    "age": 33
+  },
+  {
+    "name": "Betty",
+    "age": 34
+  },
+  {
+    "name": "BamBam",
+    "age": 1
+  },
+  {
+    "name": "Pebbles",
+    "age": 1
+  }
+]

@@ -31,6 +31,8 @@ public class Extractor {
             }
         }catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
+            
+            System.err.println(e.getStackTraceElements[0].getLineNumber());
         }
     }
 }
