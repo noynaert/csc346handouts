@@ -89,7 +89,7 @@ public class App extends Application {
   }
 
   private void display0001(String fileName, Pane pane){
-      byte[] bytes = getBytes(fileName);
+      byte[] bytes = getBytes(fileName);  //normally, we would get from a blob in a database.
       InputStream fakeFile = new ByteArrayInputStream(bytes);
       Image image = new Image(fakeFile);
       ImageView imageView = new ImageView(image);
