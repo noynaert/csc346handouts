@@ -9,7 +9,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.InputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 
 /**
@@ -37,6 +41,7 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
         displayGriffon(griffonFileName,center);
+        display0001("resources/0001.png", center);
     }
 
     public static void main(String[] args) {
@@ -60,4 +65,36 @@ public class App extends Application {
         imageView.setPreserveRatio(true);
         pane.getChildren().add(imageView);
     }
+
+    /**
+     * Gets an array of bytes from a file.  Normally we would be getting the bytes from a blob in a database.
+     *
+     * @param fileName
+     * @return
+     */
+  private static byte[] getBytes(String fileName) {
+        byte[] bytes = null;
+        Path path = Paths.get(fileName);
+        try {
+            bytes = java.nio.file.Files.readAllBytes(path);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("--------------------------");
+            System.out.println("Could not read file " + fileName);
+            System.out.println(e.getMessage());
+            System.out.println("--------------------------");
+
+        }
+        return bytes;
+  }
+
+  private void display0001(String fileName, Pane pane){
+      byte[] bytes = getBytes(fileName);
+      InputStream fakeFile = new ByteArrayInputStream(bytes);
+      Image image = new Image(fakeFile);
+      ImageView imageView = new ImageView(image);
+      imageView.setFitWidth(100);
+      imageView.setPreserveRatio(true);
+      pane.getChildren().add(imageView);
+  }
 }
