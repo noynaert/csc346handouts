@@ -22,6 +22,7 @@ public class ThymeleafController {
         model.addAttribute("source","https://seedsworld.online/cdn/shop/files/red-creeping-thyme-seeds-vibrant-groundcover-or-non-gmo-11081.png?v=1774262278&width=720");
         model.addAttribute("comment","This is some red creaping thyme");
         model.addAttribute("time", LocalDateTime.now());
+        model.addAttribute("mascot","duke.png");
         return "about";
     }
 }
