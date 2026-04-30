@@ -1,4 +1,4 @@
-package com.noynaert.thymeleaf1;
+package com.noynaert.thymeleaf;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

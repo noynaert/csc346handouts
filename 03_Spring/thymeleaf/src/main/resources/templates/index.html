@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en"
-
-xmlns:th="http://www.thymeleaf.org">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Thymeleaf Demonstration</title>
+    <title>Index</title>
 </head>
 <body>
-<h1>Hello, ThymeLeaf!</h1>
-<h2>This is a normal h2 heading</h2>
-<h2 th:text="${name}"></h2>
-<p>The title is ${title}</p>
+<h1>Hello World</h1>
+<p>This is regarding Thymeleaf</p>
+<h2>Spice of the day</h2>
+<h3 th:text="${spice}"></h3>
+<p>Another spice is <span th:text="${anotherSpice}"></span>.</p>
 </body>
 </html>

@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.noynaert</groupId>
-    <artifactId>thymeleaf1</artifactId>
+    <artifactId>thymeleaf</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>thymeleaf</name>
     <description>thymeleaf</description>
