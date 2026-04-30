@@ -41,7 +41,7 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
         displayGriffon(griffonFileName,center);
-        display0001("resources/0001.png", center);
+         display0001("resources/0001.png", center);
     }
 
     public static void main(String[] args) {
